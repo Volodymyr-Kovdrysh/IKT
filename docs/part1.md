@@ -1,3 +1,7 @@
+```{raw} latex
+\chapterstyle{FancyChap}
+\pagestyle{metodychka}
+```
 # Методичка 2007 — Частина 1
 
 ```{toctree}

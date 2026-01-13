@@ -10,13 +10,18 @@ project = "Інформатика та комп'ютерна техніка"
 copyright = "2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В."
 author = "Мартинюк С.В., Мартинюк О.В., Ковдриш В.В."
 release = "2007"
-
+booktype = "Методичні рекомендації"  # або 'custom', якщо використовуєш свій клас
+booktitle = project
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 
 master_doc = "index"
-extensions = ["myst_parser", "sphinx.ext.autodoc"]
+extensions = [
+    "myst_parser",
+    "sphinx.ext.autodoc",
+    "sphinx_design",
+]
 source_suffix = {
     ".rst": "restructuredtext",
     ".md": "markdown",
@@ -27,13 +32,19 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 language = "uk_UA"
 
-# -- Options for HTML output -------------------------------------------------
-# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
-
 html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
 
 html_title = "Методичні рекомендації"
+html_theme_options = {
+    "icon_links": [
+        {
+            "name": "завантажити PDF",
+            "url": "_static/index.pdf",
+            "icon": "fa-solid fa-file-pdf",
+        },
+    ],
+}
 
 myst_enable_extensions = [
     "deflist",
@@ -57,3 +68,9 @@ numfig_format = {
     "code-block": "Лістинг %s",
     "section": "Розділ %s",
 }
+
+from pathlib import Path
+
+_local = Path(__file__).with_name("conf_latex.py")
+if _local.exists():
+    exec(_local.read_text(encoding="utf-8"), globals())

@@ -7,10 +7,11 @@ __pycache__/
 
 # Кеші та лог-файли Sphinx
 docs/_build/
+docs/_latex/
 docs/.doctrees/
 docs/.pytest_cache/
 docs/.sass-cache/
-
+docs/conf_latex.py
 # Sphinx автогенеровані LaTeX файли
 docs/_build/latex/
 *.aux
@@ -20,7 +21,7 @@ docs/_build/latex/
 *.lof
 *.lot
 *.idx
-*.pdf
+#*.pdf
 
 # Локальні файли IDE
 .idea/
