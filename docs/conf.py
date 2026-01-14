@@ -69,6 +69,10 @@ numfig_format = {
     "section": "Розділ %s",
 }
 
+smv_tag_whitelist = r"^v\d+\.\d+(\.\d+)?$"
+smv_branch_whitelist = r"^(main)$"
+smv_remote_whitelist = r"^origin$"
+
 from pathlib import Path
 
 _local = Path(__file__).with_name("conf_latex.py")
