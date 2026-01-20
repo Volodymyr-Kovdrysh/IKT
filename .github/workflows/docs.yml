@@ -19,7 +19,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (with tags)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -40,21 +40,50 @@ jobs:
           sphinx-multiversion docs docs/_build/html
           touch docs/_build/html/.nojekyll
 
-      - name: Add root redirect to /main/
+      - name: Generate switcher.json from git tags
+        run: |
+          python - <<'PY'
+          import json, subprocess, re, pathlib
+
+          tags = subprocess.check_output(["git", "tag", "--list", "v*"], text=True).splitlines()
+          tags = [t for t in tags if re.match(r"^v\d+(\.\d+)*$", t)]
+
+          def key(v): return [int(x) for x in v[1:].split(".")]
+          tags_sorted = sorted(tags, key=key, reverse=True)
+
+          versions = [{"name": "latest", "version": "latest", "url": "../latest/"},
+                      {"name": "main", "version": "main", "url": "../main/"}]
+          for t in tags_sorted:
+              versions.append({"name": t, "version": t, "url": f"../{t}/"})
+
+          out = pathlib.Path("docs/_build/html/_static/switcher.json")
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text(json.dumps(versions, indent=2), encoding="utf-8")
+          print("Generated", out)
+          PY
+
+      - name: Create /latest/ redirect to newest tag
+        run: |
+          latest_tag="$(git tag --list 'v*' --sort=-v:refname | head -n 1)"
+          mkdir -p docs/_build/html/latest
+          cat > docs/_build/html/latest/index.html <<EOF
+          <!doctype html>
+          <meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=../${latest_tag}/">
+          <link rel="canonical" href="../${latest_tag}/">
+          <title>Redirecting…</title>
+          <p>Redirecting to <a href="../${latest_tag}/">${latest_tag}</a>…</p>
+          EOF
+
+      - name: Root redirect to /latest/
         run: |
           cat > docs/_build/html/index.html <<'EOF'
-          <!DOCTYPE html>
-          <html lang="uk">
-            <head>
-              <meta charset="utf-8">
-              <meta http-equiv="refresh" content="0; url=main/">
-              <link rel="canonical" href="main/">
-              <title>Redirecting…</title>
-            </head>
-            <body>
-              <p>Redirecting to <a href="main/">main</a>…</p>
-            </body>
-          </html>
+          <!doctype html>
+          <meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=latest/">
+          <link rel="canonical" href="latest/">
+          <title>Redirecting…</title>
+          <p>Redirecting to <a href="latest/">latest</a>…</p>
           EOF
 
       - name: Upload site

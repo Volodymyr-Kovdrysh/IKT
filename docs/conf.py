@@ -46,8 +46,8 @@ html_theme_options = {
         },
     ],
     "switcher": {
-        "json_url": "https://volodymyr-kovdrysh.github.io/IKT/main/_static/switcher.json",
-        "version_match": "main",  # поки що статично
+        "json_url": "https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json",
+        "version_match": "latest",
     },
     "navbar_end": ["version-switcher", "navbar-icon-links"],
     "primary_sidebar_end": ["version-switcher"],
