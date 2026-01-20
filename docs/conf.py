@@ -51,7 +51,6 @@ html_theme_options = {
     },
     "navbar_end": ["version-switcher", "navbar-icon-links"],
     "primary_sidebar_end": ["version-switcher"],
-    "use_source_button": True,
 }
 
 
@@ -80,7 +79,7 @@ numfig_format = {
 
 smv_tag_whitelist = r"^v\d+\.\d+(\.\d+)?$"
 smv_branch_whitelist = r"^(main)$"
-smv_remote_whitelist = r"^origin$"
+smv_remote_whitelist = None
 
 from pathlib import Path
 
