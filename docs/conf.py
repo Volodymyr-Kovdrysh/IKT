@@ -38,7 +38,7 @@ html_js_files = ["version-switcher.js"]
 
 smv_current_version = "main"
 smv_metadata_path = ""
-smv_tag_whitelist = r"^v\d+\.\d+(\.\d+)?$"
+smv_tag_whitelist = r"^v\d+(\.\d+)*$"
 smv_branch_whitelist = r"^(main)$"
 smv_remote_whitelist = None
 
