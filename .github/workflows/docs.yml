@@ -1,4 +1,4 @@
-name: Deploy Sphinx docs to GitHub Pages (GitHub Actions)
+name: Deploy Sphinx multiversion to GitHub Pages
 
 on:
   push:
@@ -6,19 +6,17 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository (with tags)
+      - name: Checkout (full history + tags)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -34,8 +32,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build Multi-Version HTML
+      - name: Build multiversion HTML
         run: |
+          rm -rf docs/_build/html
           sphinx-multiversion docs docs/_build/html
           touch docs/_build/html/.nojekyll
 
@@ -85,18 +84,10 @@ jobs:
           <p>Redirecting to <a href="latest/">latest</a>…</p>
           EOF
 
-      - name: Upload site
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy (clean) to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: docs/_build/html
-
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
+          publish_branch: gh-pages
+          force_orphan: true
