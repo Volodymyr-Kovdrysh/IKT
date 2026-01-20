@@ -34,6 +34,7 @@ language = "uk_UA"
 
 html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
+html_js_files = ["version-switcher.js"]
 
 html_title = "Методичні рекомендації"
 html_theme_options = {
@@ -44,7 +45,15 @@ html_theme_options = {
             "icon": "fa-solid fa-file-pdf",
         },
     ],
+    "switcher": {
+        "json_url": "_static/switcher.json",
+        "version_match": "main",  # поки що статично
+    },
+    "navbar_end": ["version-switcher", "navbar-icon-links"],
+    "primary_sidebar_end": ["version-switcher"],
+    "use_source_button": True,
 }
+
 
 myst_enable_extensions = [
     "deflist",
