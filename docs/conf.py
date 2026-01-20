@@ -36,6 +36,12 @@ html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
 html_js_files = ["version-switcher.js"]
 
+smv_current_version = "main"
+smv_metadata_path = ""
+smv_tag_whitelist = r"^v\d+\.\d+(\.\d+)?$"
+smv_branch_whitelist = r"^(main)$"
+smv_remote_whitelist = None
+
 html_title = "Методичні рекомендації"
 html_theme_options = {
     "icon_links": [
@@ -47,7 +53,7 @@ html_theme_options = {
     ],
     "switcher": {
         "json_url": "https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json",
-        "version_match": "latest",
+        "version_match": smv_current_version,
     },
     "navbar_end": ["version-switcher", "navbar-icon-links"],
     "primary_sidebar_end": ["version-switcher"],
@@ -77,9 +83,6 @@ numfig_format = {
     "section": "Розділ %s",
 }
 
-smv_tag_whitelist = r"^v\d+\.\d+(\.\d+)?$"
-smv_branch_whitelist = r"^(main)$"
-smv_remote_whitelist = None
 
 from pathlib import Path
 
