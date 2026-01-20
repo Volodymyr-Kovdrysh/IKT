@@ -36,9 +36,10 @@ html_theme = "sphinx_book_theme"
 html_static_path = ["_static"]
 html_js_files = ["version-switcher.js"]
 
+
 smv_current_version = "main"
 smv_metadata_path = ""
-smv_tag_whitelist = r"^v\d+(\.\d+)*$"
+smv_tag_whitelist = r"^v\d+\.\d+(\.\d+)?$"
 smv_branch_whitelist = r"^(main)$"
 smv_remote_whitelist = None
 
