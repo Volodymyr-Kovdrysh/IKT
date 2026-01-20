@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk-UA" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Лабораторна робота № 6 &#8212; Методичні рекомендації</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a31ffe79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=0958edf7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part2/laba6';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <script src="../_static/version-switcher.js?v=364a2503"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="Основи роботи в мережі Інтернет" href="ch2.html" />
+    <link rel="prev" title="Лабораторна робота № 5" href="laba5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk-UA"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-4"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-4"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-4"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-4">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Методичні рекомендації</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part1.html">Частина 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part1/intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch1.html"><strong><u>Основи роботи з комп’ютером</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch2.html"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba1.html"><strong><u>Лабораторна робота №1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba2.html"><strong><u>Лабораторна робота № 2</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba3.html"><strong><u>Лабораторна робота № З</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch3.html"><strong><u>Текстовий процесор Microsoft Word</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba7.html"><strong><u>Лабораторна робота № 7</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba8.html"><strong><u>Лабораторна робота № 8</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba9.html"><strong><u>Лабораторна робота № 9</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba10.html"><strong><u>Лабораторна робота № 10</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba11.html"><strong><u>Лабораторна робота № 11</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba12.html"><strong><u>Лабораторна робота № 12</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba13.html"><strong><u>Лабораторна робота № 13</u></strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part2.html">Частина 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1.html"><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba1.html"><strong><u>Лабораторна робота № 1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba2-3.html"><strong><u>Лабораторні роботи № 2-3</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2.html"><strong>Основи роботи в мережі Інтернет</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3.html"><strong>MS Office: PowerPoint</strong></a></li>
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-5"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-5"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-5"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-5">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part2/laba6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><u>Лабораторна робота № 6</u></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Тема</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Мета</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Теоретичні відомості</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Хід роботи</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o-6">
+<h1><strong><u>Лабораторна робота № 6</u></strong><a class="headerlink" href="#o-6" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><strong>Тема</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>MS Excel. Фінансові функції.</p>
+</section>
+<section id="id2">
+<h2><strong>Мета</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Вміти використовувати фінансові функції для аналізу вигід­ності
+інвестицій в бізнес.</p>
+</section>
+<section id="id3">
+<h2><strong>План</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Функція для визначення майбутньої вартості теперішніх інвестицій.</p></li>
+<li><p>Функції для визначення виплат для погашення позики.</p></li>
+<li><p>Функції для визначення теперішньої вартості майбутніх інвестицій.</p></li>
+<li><p>Функції користувача. Створення модуля.</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2><strong>Теоретичні відомості</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Фінансові функції використовують для розв’язування задач планування
+фінансової діяльності, визначення прибутків, аналізу вигідності
+капітало­вкладень, кредитно-інвестиційної політики то­що. Інвестицією
+називають вкладання грошей у деякий бізнес на певних умовах. Позика у
+банку називається <em>кредитом,</em> а внесок на рахунок в банк – <em>депозитом.</em>
+Надходження грошей від деякого бізнесу називають <em>рентою.</em> Розглянемо
+основні параметри фі­нансових функцій і їхні скорочені назви:</p>
+<ul class="simple">
+<li><p><em>процентна ставка</em> (ПС) виражається у відсотках і може бути добовою,
+місячною, річною тощо;</p></li>
+<li><p><em>кількість періодів</em> (КП) кожний тривалістю доба, місяць, рік;</p></li>
+<li><p><em>періодична виплата</em> (ПВ) – сума, яку виплачує клієнт щоперіоду (це
+від’ємне число), або сума, яку отримує клієнт що-періоду (це додатне
+число);</p></li>
+<li><p><em>сума внеску</em> (СВ) – сума інвестиції, капіталовкладення, початкового
+внеску (це від’ємне число або нуль);</p></li>
+<li><p><em>тип операції</em> (Т) – число 0, якщо виплата здійснюється наприкінці
+кожного періоду, і число 1, якщо на початку.</p></li>
+</ul>
+<p>Розрізняють кредитну і депозитну процентні ставки. Кредит­на ставка є
+вищою за депозитну. Процентна ставка повинна бути узгоджена з тривалістю
+періоду, наприклад, річна ставка 60% дорівнює місячній ставці 5%. У цій
+роботі вважається, що місяч­на депозитна ставка – 5%, а кредитна – 6%
+(так було у 1997 p.). Зауважимо, що у 2005 р. ці ставки становили
+відповідно 1 і 2%.</p>
+<p><strong>1. Функція для визначення майбутньої вартості теперішніх інвестицій.
+Функція має вигляд БЗ(ПС; КП; ПВ; СВ; Т). Англі­йська назва функції FV.</strong></p>
+<p>Якщо параметр має значення 0, то його можна не зазначати. Якщо параметр
+пропускають в середині списку параметрів, то два розділювачі (у цьому
+випадку ;) мають бути поряд.</p>
+<p><em><strong>Задача 1</strong>. Інвестор вкладає в бізнес 2000 грн (чи відкриває на цю
+суму рахунок у банку) на умовах 5% ставки прибутку Щомісяця. Яка
+вартість інвестиції через 36 місяців?</em></p>
+<p>Розв’язок задачі дає така формула:</p>
+<p>=БЗ(5%;36;;-2000)</p>
+<p><em>Відповідь:</em> 11 583,63 грн.</p>
+<p><em>Зауваження.</em> У цій роботі вважатимемо, що десяткові числа записуються з
+використанням коми, а не крапки.</p>
+<p><em><strong>Задача 2</strong>. Клієнт відкриває рахунок у банку на умовах 5% ставки
+прибутку щомісяця, кладе на рахунок 2000 грн і планує на початку кожного
+місяця забирати з рахунку 100 грн. Яка сума буде на рахунку через 36
+місяців?</em></p>
+<p>=БЗ(5%; 36; 100; -2000; 1)</p>
+<p><em>Відповідь:</em> 1 520,82 грн.</p>
+<p><em><strong>Задача 3.</strong> Умова та сама, але клієнт планує не забирати, а</em>
+<em>докладати по 100 грн на початку кожного місяця.</em></p>
+<p>=БЗ(5%; 36; -100; -2000; 1)</p>
+<p><em>Відповідь:</em> 21 646,45 грн.</p>
+<p><em>Функція масиву для визначення майбутньої вартості ін­вестиційного
+капіталу</em> на умовах нарахування різних процентів за певну кількість (до
+ЗО) періодів має вигляд <strong>БЗРАСПИС(капітал; масив процентів),</strong> але є не
+у всіх програмах. Англійська назва функції <strong>FVSCHEDULE.</strong></p>
+<p><em><strong>Задача 4.</strong> Фірма інвестує 2000 грн протягом шести місяців за умови
+таких щомісячних процентних ставок 7%,6%,5%,4%, 4%,4%. Яка вартість
+інвестиції через шість місяців?</em></p>
+<p>БЗРАСПИС(2000; {0,07; 0,06; 0,05; 0,04; 0,04; 0,04})</p>
+<p><em>Відповідь:</em> <strong>Shift+Ctrl+Enter</strong> дає 2 679,22 грн. Такий бізнес
+невигідний. Ліпше покласти 2000 грн у банк під 5% на 6 місяців і, нічого
+не роблячи, отримати Б3(5% ;6;;-2000) = 2 680,19 грн.</p>
+<p><strong>2. Функції для визначення виплат для погашення позики.</strong></p>
+<p>Введемо нові терміни і їхні скорочені назви:</p>
+<ul class="simple">
+<li><p><em>номер періоду</em> (НП);</p></li>
+<li><p><em>сума позики</em> (СП);</p></li>
+<li><p><em>кінцеве значення позики</em> (КЗ).</p></li>
+</ul>
+<p><em>Функція <strong>ППЛАТ</strong> (англ. РМТ) призначена для визначення суми
+періодичних виплат для погашення боргу</em> і має вигляд <strong>ППЛАТ(ПС; КП; СП;
+КЗ; Т).</strong> Така виплата складається з двох частин, які обчислюють за
+допомогою двох функцій <strong>ПЛПРОЦ і ОСНПЛАТ</strong> (англ. <strong>ІРМТ та РРМТ),</strong> а
+саме:</p>
+<p>а) <em>виплата за процентами</em> <strong>ПЛПРОЩПС; НП; КП; СП; КЗ; Т);</strong></p>
+<p>б) <em>основна виплата</em> <strong>ОСНШІАТ(ПС; НП; КП; СП; КЗ; Т).</strong> Виплата за
+процентами щоперіоду зменшується, а основна виплата щоперіоду зростає,
+їхня сума постійна і дорівнює ППЛАТ.</p>
+<p><em><strong>Задача 5</strong>. Бізнесмен взяв у банку кредит на суму 2000 грн терміном
+на 12 місяців за умови щомісячного погашення позики і місячної ставки
+кредиту 6%. Визначити величину щомісячних виплат і її складові
+наприкінці першого місяця.</em></p>
+<p>= ППЛАТ(6%; 12; 2000)</p>
+<p><em>Відповідь:</em> -238,55 грн.</p>
+<p>= ПЛПРОЦ(6%; 1; 12; 2000)</p>
+<p><em>Відповідь:</em> -120,00 грн.</p>
+<p>= ОСНПЛАТ(6%; 1; 12; 2000)</p>
+<p><em>Відповідь:</em> -118,55 грн.</p>
+<p><em><strong>Задача 6.</strong> Побудувати таблицю значень двох складових ПЛПРОЦ і
+ОСНПЛАТ щомісячних виплат наприкінці кожного Місяця за кредит (2000 грн,
+6%) протягом року. Розв’яжіть задачу самостійно.</em></p>
+<p>Розглянемо функцію <strong>КПЕР</strong> (англ. назва <strong>NPER),</strong> яка обчис­лює
+<em>кількість періодів, потрібних для погашення суми позики,</em> наданої під
+деяку процентну ставку за умови заздалегідь заданої суми періодичних
+виплат: <strong>КПЕР(ПС; ПВ; СП; КЗ; Т).</strong></p>
+<p><em><strong>Задача 7.</strong> Позику 2000 грн беруть за умови повертання на­прикінці
+кожного місяця 200 грн і процентної ставки 6%. Скільки місяців потрібно
+для повертання позики?</em></p>
+<p>=КПЕР(6%; -200; 2000)</p>
+<p><em>Відповідь:</em> 15,73 місяця.</p>
+<p>Функція <strong>НОРМА(КП; ПВ; СП; КЗ; Т; початкове наближен­ня)</strong> визначає
+вигідність надання позики, тобто <em>реальну процентну ставку від надання
+позики</em> на певну суму за умови фіксованих періо­дичних виплат протягом
+деякої кількості періодів. Тут потрібно задати деяке початкове
+наближення до шуканої процентної ставки, наприклад 0,1 (10%). (Англ.
+<strong>RATE,</strong> в російській версії MS Office ХР <strong>— СТАВКА).</strong></p>
+<p><em><strong>Задача 8.</strong> Бізнесмен звертається до банку за позикою (кре­дитом) на
+суму 2000 грн на 12 місяців за умови періодичних виплат 200 грн
+наприкінці кожного місяця протягом року. Визначити процентну ставку
+позики.</em></p>
+<p>=НОРМА(12; -200; 2000; 0; 0; 0,1)</p>
+<p><em>Відповідь:</em> 3%. Така позика для банку є невигідною, якщо місячна
+депозитна процентна ставка, наприклад, 5%. Банк позики не надасть.</p>
+<p><strong>3. Функції для визначення теперішньої вартості майбутніх інвестицій.</strong>
+Розглянемо функції для визначення вигідності інвестицій
+(капіталовкладень) у деякий бізнес.</p>
+<p>Депозитна процентна ставка (ДПС) — це ставка, яку банк виплачує за
+вклади клієнтів.</p>
+<p>Функція <strong>ПЗ(ДПС; КП; рента за один період; рента в кінці терміну; Т)</strong>
+обчислює <em>сьогоднішню вартість низки майбутніх над­ходжень (ренти)</em> від
+бізнесу (англ. PV, в рос. MS Office ХР — ПС).</p>
+<p>Для обчислення сьогоднішньої вартості майбутньої ренти використовується
+<strong>принцип дисконтування</strong> — приведення суми ренти (доходу) за деякий
+термін до її вартості в цей момент часу. Суттєво враховується депозитна
+процентна ставка, оскільки вважається, що вже перше надходження стає
+депозитом у банку.</p>
+<p>Дисконтування дає відповідь на запитання: чи варто вкладати гроші в
+такий бізнес, чи краще їх поставити в банк під відсотки і нічого не
+робити.</p>
+<p><em><strong>Задача 9.</strong> Нехай для ведення деякого бізнесу потрібно вкласти
+сьогодні 3500 грн, а бізнес протягом п’яти місяців дава­тиме по 1000 грн
+доходу (ренти) наприкінці місяця. Депозит­на ставка банку 5%. Чи варто
+займатися цим бізнесом?</em> =ПЗ(5%;5; 1000)</p>
+<p><em>Відповідь:</em> вартість бізнесу (гранично допустима інвестиція) - 4 329
+грн. Оскільки цю суму потрібно вкладати, число отри­маємо від’ємне.
+Бізнес вигідний, бо для його ведення потрібно лише 3 500 грн. Якби
+потрібно було більше, ніж 4 329 грн, то такий бізнес був би збитковим.</p>
+<p><em><strong>Задача 10.</strong> Умова та ж, що й в задачі 9, але ренту (дохід) 4500 грн
+планується отримати наприкінці терміну. Чи вигідний такий бізнес?</em></p>
+<p>=ПЗ(5%; 5;; 4500)</p>
+<p><em>Відповідь:</em> сьогоднішня вартість ренти 3 525 грн (отримаємо від’ємне
+число). Такий бізнес вигідним вважати не можна. Причина — немає змоги
+реінвестувати ренту.</p>
+<p>Розглянемо функцію <strong>НПЗ(ДПС;рента1; рента2;…),</strong> яка об­числює
+<em>сьогоднішню вартість різних рент,</em> що надходять напри­кінці рівномірних
+періодів (англ.: NPV, в рос. Office ХР — <strong>ЧПС).</strong></p>
+<p><em><strong>Задача 11.</strong> У бізнес потрібно вкласти сьогодні 25000 грн. Наприкінці
+першого місяця потрібно вкласти ще 2000 грн., а в наступні п’ять місяців
+бізнес даватиме такі доходи: 4 000,5 000, 6 000, 7 000, 8 000 грн. Чи
+цей бізнес вигідний?</em></p>
+<p>=НПЗ(5%; -2000; 4000; 5000; 6000; 7000; 8000)</p>
+<p><em>Відповідь:</em> вартість бізнесу 22 433 грн. Оскільки затрати 25 000 грн
+більші за вартість бізнесу, то такий бізнес невигідний.</p>
+<p><em><strong>Задача 12.</strong> Ви маєте сьогодні вкласти у бізнес 25 000 грн і будете
+вести його протягом п’яти місяців. Методом проб побудувати фінансову
+модель вигідного бізнесу.</em></p>
+<p>Нехай очікуваний дохід щомісяця відповідно такий: 5000, 6000, 7000,
+8000, 9000 — всього 35000.</p>
+<p>Оцінимо вартість цих рент:</p>
+<p>=НПЗ(5%; 5000; 6000; 7000; 8000; 9000)</p>
+<p><em>Відповідь:</em> 29 884 грн. Вартість рент є більшою за інвестицію (25000),
+тому такий бізнес вигідний.</p>
+</section>
+<section id="id5">
+<h2><strong>Хід роботи</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Придумати, записати умови і розв’язати 12 задач, подібних до наведених
+вище. Ваші задачі можуть відрізнятися від описаних лише числами.
+Зокрема, врахуйте нові поточні депозитні та кредитні ставки банків.
+Основна грошова сума (інвестиції, вклади, позика, рента), що наявна в
+умові задачі, визначається дописуванням трьох нулів до номера вашого
+варіанта. Під час виконання роботи у стовпець А заносити текст «Задача
+№…», поряд у стовпець В вводити формули з фінансовими функціями й
+отримувати результати. У стовпець С вводити висновки: «Вигідно» або
+«Невигідно».</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><strong><u>Лабораторна робота № 5</u></strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ch2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><strong>Основи роботи в мережі Інтернет</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Тема</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Мета</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Теоретичні відомості</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Хід роботи</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Мартинюк С.В., Мартинюк О.В., Ковдриш В.В.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

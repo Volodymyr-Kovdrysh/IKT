@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk-UA" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Лабораторна робота №1 &#8212; Методичні рекомендації</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a31ffe79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=0958edf7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part1/laba1';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <script src="../_static/version-switcher.js?v=364a2503"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="Лабораторна робота № 2" href="laba2.html" />
+    <link rel="prev" title="Основи роботи в Microsoft Windows XP" href="ch2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk-UA"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-4"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-4"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-4"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-4">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Методичні рекомендації</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part1.html">Частина 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1.html"><strong><u>Основи роботи з комп’ютером</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2.html"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong><u>Лабораторна робота №1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba2.html"><strong><u>Лабораторна робота № 2</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba3.html"><strong><u>Лабораторна робота № З</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3.html"><strong><u>Текстовий процесор Microsoft Word</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba7.html"><strong><u>Лабораторна робота № 7</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba8.html"><strong><u>Лабораторна робота № 8</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba9.html"><strong><u>Лабораторна робота № 9</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba10.html"><strong><u>Лабораторна робота № 10</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba11.html"><strong><u>Лабораторна робота № 11</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba12.html"><strong><u>Лабораторна робота № 12</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba13.html"><strong><u>Лабораторна робота № 13</u></strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2.html">Частина 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch1.html"><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba1.html"><strong><u>Лабораторна робота № 1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba2-3.html"><strong><u>Лабораторні роботи № 2-3</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch2.html"><strong>Основи роботи в мережі Інтернет</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch3.html"><strong>MS Office: PowerPoint</strong></a></li>
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-5"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-5"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-5"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-5">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part1/laba1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><u>Лабораторна робота №1</u></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Тема</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Мета</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Словник</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Хід роботи</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Висновки</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Контрольні запитання</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o1">
+<h1><strong><u>Лабораторна робота №1</u></strong><a class="headerlink" href="#o1" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><strong>Тема</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>Ознайомлення з комп’ютером і операційною системою MS Windows. Вікна та
+дії над ними. Властивості робочого столу, вікна, папки та диска.</p>
+</section>
+<section id="id2">
+<h2><strong>Мета</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уміти входити в систему, користуватися папкою „Мій комп’ютер”, панеллю
+задач, виконувати дії з вікнами, налаштовувати піктограми, вікно папки,
+робочий стіл.</p>
+</section>
+<section id="id3">
+<h2><strong>Словник</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Мій комп’ютер Мой компьютер My computer</p>
+<p>Пуск Пуск Start</p>
+<p>Вигляд Вид View</p>
+<p>Великі значки Крупные значки Large icons</p>
+<p>Список Список List</p>
+<p>Таблиця Таблица Details</p>
+<p>Малі значки Мелкие значки Small icons</p>
+<p>Зверху — донизу Сверху вниз Tile Horizontally</p>
+<p>Згорнути всі Свернуть все Minimize All</p>
+<p>Властивості Свойства Properties</p>
+<p>Фон/тло Фон Background</p>
+<p>Заставка Заставка Screen Saver</p>
+<p>Параметри Параметры Options</p>
+<p>Огляд Обзор Browse</p>
+<p>Скасувати Отмена Cancel</p>
+<p>Закінчити роботу Завершение работы Shut Down</p>
+<p>Вимкнути Выключить Switch off</p>
+<p>Перезавантажити Перезагрузить Restart</p>
+</section>
+<section id="id4">
+<h2><strong>Хід роботи</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Відкрийте вікно об’єкта «Мій комп’ютер».</strong> Двічі клацніть над його
+піктограмою лівою клавішею миші.</p></li>
+<li><p><strong>Розгорніть вікно на весь екран.</strong> Для цього клацніть на
+кнопці <img alt="../_images/image1.png" src="../_images/image1.png" /></p></li>
+<li><p><strong>Надайте вікну попереднього
+вигляду</strong><img alt="../_images/image2.png" src="../_images/image2.png" /><strong>Мінімізуйте
+вікно</strong><img alt="../_images/image3.png" src="../_images/image3.png" /></p></li>
+<li><p><strong>Розгорніть мінімізоване вікно.</strong> Клацніть над кнопкою «Мій
+комп’ютер» у панелі задач.</p></li>
+<li><p><strong>Закрийте вікно</strong><img alt="../_images/image4.png" src="../_images/image4.png" /> Закрити вікно можна
+одним з вищеописаних способів.</p></li>
+</ol>
+<!-- -->
+<ol class="arabic simple" start="6">
+<li><p><strong>Знову відкрийте вікно об’єкта «Мій комп’ютер».</strong></p></li>
+<li><p><strong>Змініть розміри вікна.</strong> Чи є у вікні смуги прокручування? Якщо у
+вікні видно всі піктограми, то смуг прокручування не буде.</p></li>
+<li><p><strong>Зменшіть розміри вікна, щоб з’явились смуги про­кручування.</strong></p></li>
+<li><p><strong>Поекспериментуйте зі смугами прокручування.</strong> Перетягуйте бігунці
+<img alt="../_images/image5.png" src="../_images/image5.png" /> або клацайте лівою клавішею
+миші на кнопках<img alt="../_images/image6.png" src="../_images/image6.png" />,<img alt="../_images/image7.png" src="../_images/image7.png" /> (для вертикального
+перегляду) тощо.</p></li>
+<li><p><strong>Виберіть найоптимальніший, на вашу думку, розмір вікна.</strong></p></li>
+<li><p><strong>Активізуйте (викличте) контекстне меню робочого поля вікна об’єкта
+«Мій комп’ютер».</strong> Щоб викликати контекстне меню елемента (тут -
+робочого поля об’єкта «Мій комп’ютер»), треба над елементом (тут -
+над чистим полем вікна) клацнути правою клавішею миші. Розгля­ньте
+доступні команди.</p></li>
+<li><p><strong>Вивчіть способи зображення піктограм (значків) у вікні.</strong> Є
+декілька способів зображення піктограм у вікні: великі значки
+(плитка), малі, список, таблиця (детально), ескіз сто­рінки. Виберіть
+у контекстному меню пункт ВИГЛЯД, перейдіть у його підменю і
+виберіть Значки, а потім — СПИСОК. Спосте­рігайте за змінами у
+робочому полі. Спосіб ЕСКІЗ СТОРІНКИ використовують для відображення
+значків графічних чи вебфайлів — значок матиме вигляд картинки з
+файлу.</p></li>
+<li><p><strong>Виконайте пункти 12 - 13, щоб задати інші три способи зображення
+піктограм.</strong> Відобразіть піктограми у вигляді таблиці (пункт
+Таблиця). <em>Вивчіть характеристики (властивості) декількох об’єктів:
+назву, тип, обсяг.</em></p></li>
+<li><p><strong>Відобразіть піктограми різними способами, але тепер користуйтеся
+засобами <u>головного меню вікна.</u></strong> Виберіть в головному меню
+пункт ВИГЛЯД і потрібний підпункт. Яке розташування піктограм Вам
+більше до вподоби?</p></li>
+<li><p><strong>Увімкніть / вимкніть панель інструментів і рядок стану вікна.</strong>
+Скористайтеся відповідними командами з пункту Вигляд го­ловного меню.
+Вмикання/вимикання відбувається шляхом по­вторного виконання
+потрібної команди. Увікмнений режим по­значений «пташкою» або
+кружечком ліворуч від назви команди. Простежте, щоб для панелі
+інструментів був увімк­нений режим відображення звичайних кнопок і
+адресного рядка. Ознайомтесь з призначенням кнопок на панелі. Для
+цього наведіть на непідписані кнопки вказівник миші, отри­майте
+підказку і <em>вивчіть назви декількох. Вивчіть інформацію з рядка
+стану.</em></p></li>
+<li><p><strong>Відкрийте вікно диска D: або іншого.</strong> Щоб відкрити вікно диска,
+двічі клацніть мишею на його піктограмі.</p></li>
+<li><p><strong>Дослідіть властивості диска: обсяг диска, а також обсяг у байтах і
+відсотках вільного місця на диску.</strong> Для цього клацніть правою
+клавішею миші на чистому полі та виберіть пункт Властивості.
+Закрийте діалогове вікно.</p></li>
+<li><p><strong>Дослідіть вікно папки, відкривши будь-яку папку на диску.</strong>
+Відкрийте папку, двічі клацнувши на її піктограмі. Виконайте команди Вигляд -&gt; Значки. Змініть роз­ташування значків у вікні, застосувавши команду Вигляд -&gt; Упорядкувати значки і вибравши по черзі декілька способів упорядкування: за іменем, за обсягом, за датою внесення останніх змін, групами, автоматично, вирівняти. Змініть розташування значків методом перетягування, вимкнувши режим автоматично, якщо це можливо у вашій конкретній ситуації.</p></li>
+<li><p><strong>Дослідіть властивості папки. Відкрийте чотири будь-які папки (можна на різних дисках) у чотирьох вікнах, а не послідовно в одному вікні.</strong> У Windows 95, щоб на екрані було декілька вікон, а не одне останнє вікно, потрібно задати відповідний режим командами Вигляд -&gt; Властивості папки. У Windows 98 розгляньте закладку Загальні, виберіть радіо-кнопку На основі вибраної настройки, натисніть на кнопку Налаштування і з-поміж способів огляду папок виберіть режим Відкривати кожну папку в окремому вікні, а також виберіть веб-стиль (відкривати одним клацанням миші, вибирати вказівником миші) чи звичайний стиль (відкривати подвійним клацанням, вибирати одним клацанням) користування мишею. У Windows XP для цього виконайте команди Сервіс Влас­тивості папки… і задайте потрібні режими на закладці Загальні. Тут також можна задати чи скасувати відображення Області зі списком задач у робочому полі вікна, а також стиль користування мишею.</p></li>
+<li><p><strong>Змініть стиль користування мишею зі звичайного на веб-стиль,
+поекспериментуйте з ним і поверніться до попереднього стилю.</strong></p></li>
+<li><p><strong>Зробіть активними почергово інші вікна.</strong> Для цього потрібно
+клацнути в межах наступного вікна.</p></li>
+<li><p><strong>Упорядкуйте вікна на екрані каскадом.</strong> Відшукайте <u>вільне
+місце</u> на панелі задач і клацніть на ньому правою клавішею миші.
+Якщо вільного місця немає, то спочатку розтягніть вікно панелі
+задач. Виберіть у контекст­ному меню пункт Каскадом.</p></li>
+<li><p><strong>Упорядкуйте вікна командою Вікна</strong> зверху-донизу, <strong>а потім —</strong>
+Зліва-направо. <em>Яке розташування вікон з трьох можливих Вам більше
+до вподоби?</em></p></li>
+<li><p><strong>Виберіть розташування вікон каскадом. Зробіть активним вікно „Мій
+комп’ютер”.</strong></p></li>
+<li><p><strong>Згорніть (мінімізуйте) усі вікна.</strong> У контекстному меню панелі
+задач виконайте команду Згорнути всі чи Показати робочий стіл.</p></li>
+<li><p><strong>Розгорніть мінімізоване вікно «Мій комп’ютер». Зменшіть розміри
+вікна до квадратного вигляду і перетягніть вікно у центр екрана.</strong></p></li>
+<li><p><strong>Закрийте вікно «Мій комп’ютер».</strong></p></li>
+<li><p><strong>Закрийте всі мінімізовані вікна об’єктів, кнопки яких є на панелі
+задач.</strong></p></li>
+<li><p><strong>Дослідіть контекстне меню робочого столу.</strong> На чистому місці
+екрана клацніть правою клавішею миші — отримаєте контекстне меню
+робочого столу. Скасуйте авто­матичне упорядкування значків і змініть
+розташування значків методом їх перетягування.</p></li>
+<li><p><strong>Дослідіть властивості робочого столу. Виконайте нала­штовування
+робочого столу з дозволу викладача. Ознайомтеся із <u>закладками</u>
+діалогового вікна Влас­тивості екрана.</strong> У контекстному меню робочого
+столу виберіть пункт Власти­вості. Вікно, яке з’явиться, називають
+<em>діалоговим вікном влас­тивостей екрана.</em> Воно має декілька
+<em>закладок:</em> Фон (Тло), Заставка, Оформлення, Web, Плюс або Internet,
+Параметри (На лаштування) залежно від версії ОС. Виберіть закладку
+Фон чи Робочий стіл і поекспериментуйте з рисунком робочого столу
+(шпалерами). Виберіть у списку назву рисунка: Ліс, Хмари, Marble,
+Leaves, Plus! (клацнувши на ній) і натисніть на кнопки Розмножити та
+Застосувати. Бажано запам’ятати і відновити стартовий рисунок.
+Зверніть увагу на наявність кнопки Огляд – за її допомогою можна
+знайти у файловій системі будь-який графічний файл і ство­рити нові
+шпалери. Виберіть закладку Заставка і поекспериментуйте з екранними
+заставками: Вічний двигун, Геометричний вальс, Скрізь космос,
+Об’ємний текст, Біжучий рядок чи іншими. Задайте час бездіяльності –
+1 хв. Обов’язково натисніть на кнопку Пара­метри і поміняйте
+параметри, зокрема, працюючи з текстовими заставками, введіть свій
+текст – деяке ім’я тощо. Зробивши вибір, натисніть на кнопку ОК.
+Тепер на закладці Оформлення поекспериментуйте з кольо­ровим
+оформленням кожного елемента вікна: спочатку розгля­ньте існуючі
+схеми: Морська, Рожева, Бузкова, а потім помі­няйте колір будь-якого
+елемента, клацнувши над ним і на кнопках вибору кольору для фону,
+тексту тощо. Змін не фіксуйте - перейдіть на іншу закладку або
+натисніть на кнопку Скасувати (не рекомендуємо на навчальних
+комп’ю­терах вносити такі зміни, тому не натискайте на кнопку ОК). На
+закладці Параметри знайдіть і перепишіть у звіт характе­ристику
+роздільної здатності екрана: 640x480 або 800x600, або 1024x768.
+Високу роздільну здатність використовують під час роботи з
+графічними програмами, а в інших випадках користу­ються середньою —
+тоді значки на екрані більші. (<em>Попереджен­ня:</em> не можна змінювати
+роздільну здатність без дозволу викладача). Закрийте вікно
+налаштування екрана.</p></li>
+<li><p><strong>Закінчіть роботу.</strong></p></li>
+</ol>
+</section>
+<section id="id5">
+<h2><strong>Висновки</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Ви ознайомилися з поняттями <em>операційна система, диск, папка, файл,
+об’єкт, вікно об’єкта, піктограма, діалогове вікно.</em> Піктограма
+репрезентує об’єкт. Вікно розкриває зміст об’єкта. З вікном можна
+виконувати такі дії: 1) відкривати, 2) закривати, 3) мінімізувати, 4)
+перетягувати, 5) змінювати розміри, 6) активі­зувати, 7) налаштовувати.</p>
+<p>Вікно складається з елементів, над якими можна вико­нувати дії, визначені
+в контекстних меню елементів.</p>
+<p>Контекстне меню об’єкта чи вибраного елемента вікна ви­кликають
+натисканням правої клавіші миші.</p>
+<p>Дію над об’єктом можна виконати лише вибравши його.</p>
+<p>Піктограми у вікні можна відображати різними способами. Якщо їх мало, то
+варто вибирати Значки, якщо багато, то — СПИСОК, а якщо файли графічні —
+Ескіз. <u>Значки</u> можна переміщати у вікні, вимкнувши режим їх
+автоматичного упорядкування.</p>
+</section>
+<section id="id6">
+<h2><strong>Контрольні запитання</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Яке призначення об’єкту «Мій комп’ютер»?</p></li>
+<li><p>Яке призначення панелі задач?</p></li>
+<li><p>Що таке ярлик?</p></li>
+<li><p>Яке призначення піктограм?</p></li>
+<li><p>З чого складається вікно об’єкту?</p></li>
+<li><p>Які необов’язкові елементи вікна?</p></li>
+<li><p>Яке призначення смуг прокручування?</p></li>
+<li><p>Які дії можна виконувати з вікном?</p></li>
+<li><p>Для чого вікно мінімізують?</p></li>
+<li><p>Як можна змінити розташування вікна на екрані?</p></li>
+<li><p>Чим відрізняється активне вікно від пасивного?</p></li>
+<li><p>Як зробити вікно активним?</p></li>
+<li><p>Для чого призначене контекстне меню?</p></li>
+<li><p>Як відкрити папку?</p></li>
+<li><p>Як розгорнути вікно на весь екран?</p></li>
+<li><p>Як змінити розміри вікна?</p></li>
+<li><p>Як виконати перетягування за допомогою миші?</p></li>
+<li><p>Як активізувати контекстне меню об’єкту?</p></li>
+<li><p>Що таке робочий стіл?</p></li>
+<li><p>Як закрити папку (вікно)?</p></li>
+<li><p>Яке призначення програми сканування диску?</p></li>
+<li><p>Яке призначення комбінації клавіш <strong>Alt+F4?</strong></p></li>
+<li><p>Як можна відобразити піктограми у вікні?</p></li>
+<li><p>Яка перевага розташування піктограм у вигляді таблиці?</p></li>
+<li><p>Як увімкнути / вимкнути панель інструментів?</p></li>
+<li><p>Яке призначення рядка стану?</p></li>
+<li><p>Як дослідити властивості диску?</p></li>
+<li><p>Як закрити мінімізовані об’єкти?</p></li>
+<li><p>Як виконати налаштування робочого столу?</p></li>
+<li><p>Як правильно вимикати комп’ютер?</p></li>
+<li><p>Які рисунки робочого столу та екранних заставок ви знаєте?</p></li>
+<li><p>Які кнопки містить панель задач?</p></li>
+<li><p>Якими способами можна розташувати вікна на екрані?</p></li>
+<li><p>Що таке повний шлях до файлу?</p></li>
+<li><p>Які символи не можна використовувати у назвах файлів?</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><strong><u>Лабораторна робота № 2</u></strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Тема</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Мета</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Словник</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Хід роботи</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Висновки</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Контрольні запитання</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Мартинюк С.В., Мартинюк О.В., Ковдриш В.В.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

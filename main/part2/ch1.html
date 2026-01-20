@@ -1,0 +1,1060 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk-UA" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Редактор електронних таблиць Microsoft Excel &#8212; Методичні рекомендації</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a31ffe79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=0958edf7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part2/ch1';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <script src="../_static/version-switcher.js?v=364a2503"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="Лабораторна робота № 1" href="laba1.html" />
+    <link rel="prev" title="ВСТУП" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk-UA"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-4"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-4"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-4"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-4">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Методичні рекомендації</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part1.html">Частина 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part1/intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch1.html"><strong><u>Основи роботи з комп’ютером</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch2.html"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba1.html"><strong><u>Лабораторна робота №1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba2.html"><strong><u>Лабораторна робота № 2</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba3.html"><strong><u>Лабораторна робота № З</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch3.html"><strong><u>Текстовий процесор Microsoft Word</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba7.html"><strong><u>Лабораторна робота № 7</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba8.html"><strong><u>Лабораторна робота № 8</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba9.html"><strong><u>Лабораторна робота № 9</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba10.html"><strong><u>Лабораторна робота № 10</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba11.html"><strong><u>Лабораторна робота № 11</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba12.html"><strong><u>Лабораторна робота № 12</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba13.html"><strong><u>Лабораторна робота № 13</u></strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part2.html">Частина 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba1.html"><strong><u>Лабораторна робота № 1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba2-3.html"><strong><u>Лабораторні роботи № 2-3</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2.html"><strong>Основи роботи в мережі Інтернет</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3.html"><strong>MS Office: PowerPoint</strong></a></li>
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-5"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-5"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-5"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-5">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part2/ch1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><u>Редактор електронних таблиць Microsoft Excel</u></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel"><strong>Знайомство з Excel</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Введення та редагування даних</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Засоби обробки даних</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Робота з формулами та функціями</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Категорії функцій</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Математичні функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Статистичні функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Текстові функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><strong>Логічні функції</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><strong>Діаграми та графіки</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><strong>Оформлення сторінок і друк документу</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><strong>Настройка Excel</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="microsoft-excel">
+<h1><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong><a class="headerlink" href="#microsoft-excel" title="Link to this heading">#</a></h1>
+<section id="excel">
+<h2><strong>Знайомство з Excel</strong><a class="headerlink" href="#excel" title="Link to this heading">#</a></h2>
+<p>Щоб запустити Excel, слід зайти в меню <em>Пуск</em>, у підменю <em>Усі програми</em>
+відкрити відповідну програмну групу (звичайно це <em>Microsoft Office</em>), а
+потім вибрати пункт <em>Microsoft Excel</em>.</p>
+<p>Якщо ж на робочому столі є ярлик, можна скористатися ним для запуску
+редактора Excel.</p>
+<p>Для того щоб показати або приховати яку – небудь із панелей
+інструментів, можна скористатися однією з команд підменю <em>Вигляд /
+Панелі інструментів</em>.</p>
+<p>Багато з кнопок панелі <em>Стандартна</em> текстового редактору Word ідентичні
+кнопкам аналогічної панелі в Excel.</p>
+<p>Кожна робоча книга за замовчуванням містить три аркуші зі стандартними
+назвами: <em>Аркуш 1, Аркуш 2, Аркуш 3</em>.</p>
+<p>Перетягуючи мишею роздільник, що знаходиться у нижній частині екрану (по
+центру), можна змінювати ширину області ярличків аркушів і
+горизонтальної смуги прокрутки.</p>
+<p>Під робочу книгу в програмі Excel виділено один файл зі стандартним
+розширенням XLS.</p>
+<p>Для створення нового файлу необхідно виконати команду <em>Файл / Створити</em>,
+після чого в області завдань <em>Створити книгу</em> вибрати варіант <em>Нова
+книга</em>.</p>
+</section>
+<section id="id1">
+<h2><strong>Введення та редагування даних</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>У клітинки можна вводити дані двох типів: формули та константи (числа,
+текст або значення дат і часу).</p>
+<p>При заповненні клітинок уводиться інформація, яка відображається у рядку
+формул, а в полі імені виводиться посилання на активну клітинку.</p>
+<p>Під час роботи з таблицею можна застосовувати виділення різних її
+елементів: фрагментів тексту, клітинок, діапазонів клітинок, рядків або
+стовпців.</p>
+<p><em><u>Виділення тексту в клітинках</u></em></p>
+<p>Щоб виділити текст у клітинці, слід вибрати клітинку, двічі клацнути на
+ній для переходу в режим редагування та виділити необхідний текст.</p>
+<p><em><u>Виділення суміжних клітинок</u></em></p>
+<p>Виділити суміжні клітинки можна двома способами, а саме:</p>
+<ul class="simple">
+<li><p>утримуючи натиснутою кнопку миші, перетягнути вказівник з одного кута
+діапазону, що виділяється, в інший;</p></li>
+<li><p>клацнути на першій клітинці діапазону, що виділяється, а потім,
+утримуючи натиснутою клавішу <strong>Shift</strong>, клацнути останню клітинку
+діапазону.</p></li>
+</ul>
+<p><em><u>Виділення несуміжних клітинок</u></em></p>
+<p>Після виділення першого діапазону необхідно виділяти інші клітинки,
+утримуючи натиснутою клавішу <strong>Ctrl</strong>.</p>
+<p><em><u>Виділення рядків і стовпців</u></em></p>
+<p>Для того щоб виділити один стовпець (рядок), достатньо клацнути на його
+назві.</p>
+<p>У редакторі Excel копіювання та переміщення даних виконується
+стандартним для Windows способом, який складається з таких етапів:</p>
+<ol class="arabic simple">
+<li><p>Виділення частини вмісту клітинки або декількох клітинок, тобто тієї
+інформації, яку потрібно копіювати.</p></li>
+<li><p>Копіювання (переміщення) виділеного блоку в буфер обміну одним зі
+способів:</p></li>
+</ol>
+<ul class="simple">
+<li><p>за допомогою сполучення клавіш <strong>Ctrl + Ins ( Shift + Del )</strong>;</p></li>
+<li><p>за допомогою кнопки <em>Копіювати (Вирізати)</em> панелі <em>Стандартна</em>;</p></li>
+<li><p>з використанням команди <em>Копіювати (Вирізати)</em> контекстного меню, що
+викликається натисканням правої кнопки миші;</p></li>
+<li><p>за допомогою команди <em>Правка / Копіювати (Правка / Вирізати)</em>.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Установка курсору в те місце документу, куди буде вставлена
+необхідна інформація.</p></li>
+<li><p>Вставка інформації, що знаходиться в буфері, у будь – який додаток
+системи Windows:</p></li>
+</ol>
+<ul class="simple">
+<li><p>за допомогою сполучення <strong>Shift + Ins</strong>;</p></li>
+<li><p>кнопкою <em>Вставити</em> на панелі <em>Стандартна</em>;</p></li>
+<li><p>з використанням команди <em>Вставити</em> контекстного меню;</p></li>
+<li><p>за допомогою команди <em>Правка / Вставити</em>.</p></li>
+</ul>
+<p><em><u>Використання спеціальної вставки</u></em></p>
+<p>З даними, які були скопійовані в буфер обміну, можна виконувати різні
+операції (додавати, множити, транспонувати та т.п.), а також виконувати
+операцію копіювання тільки формату клітинки або копіювання тільки
+значення клітинки без формул.</p>
+<p>При вводі даних часто виникає необхідність вставки порожнього рядка або
+порожнього стовпця в таблицю:</p>
+<ol class="arabic simple">
+<li><p>Виділити стовпець (рядок), перед яким потрібно виконати вставку,
+клацанням миші на його заголовку.</p></li>
+<li><p>Викликати контекстне меню натисканням правої кнопки миші.</p></li>
+<li><p>У випадаючому списку команд вибрати команду <em>Додати клітинки</em>, після
+чого з’явиться новий стовпець (рядок).</p></li>
+</ol>
+<p>Для наочного відображення даних можна змінювати ширину стовпців таблиці.</p>
+<p>Щоб змінити ширину декількох стовпців, спочатку треба їх виділити, а
+потім перетягнути праву межу заголовку будь-якого виділеного стовпця.</p>
+<p>У редакторі Excel інформаційні дані відображаються на екрані у певному
+форматі.</p>
+<p><em><u>Числовий формат</u></em></p>
+<p>Представлення інформації у вигляді чисел відрізняється від текстового,
+насамперед, обмеженою кількістю символів, а також більш жорсткими
+правилами їхньої інтерпретації, тобто складання чисел з наявних
+символів.</p>
+<p><em><u>Текстовий формат даних</u></em></p>
+<p>Будь-яка введена послідовність знаків, що містить нечислові символи,
+інтерпретується редактором Excel як текст.</p>
+<p>В Excel існує механізм уведення рядів даних, тобто значень, що
+відрізняються одне від одного на фіксований крок, причому дані не
+обов’язково повинні бути числовими.</p>
+<p><em><u>Списки даних</u></em></p>
+<p>В Excel передбачено декілька списків з фіксованим набором значень (повні
+та скорочені назви місяців і днів).</p>
+<p><em><u>Прогресія</u></em></p>
+<p>Для заповнення клітинок можна побудувати ряди даних:</p>
+<ol class="arabic simple">
+<li><p>Виділити діапазон клітинок, які потрібно заповнити.</p></li>
+<li><p>У меню <em>Правка</em> відкрити підменю <em>Заповнити</em>.</p></li>
+<li><p>Вибрати пункт <em>Прогресія</em>.</p></li>
+<li><p>У діалоговому вікні <em>Прогресія</em> встановити параметри ряду даних.</p></li>
+<li><p>Закрити вікно діалогу натисканням кнопки <em>ОК</em>.</p></li>
+</ol>
+<p>Для форматування вмісту клітинки використовуються вкладки діалогового
+вікна <em>Формат клітинок</em>.</p>
+<p><em><u>Вкладка Число</u></em></p>
+<p>Дозволяє вибрати необхідний числовий формат.</p>
+<p><em><u>Вкладка Вирівнювання</u></em></p>
+<p>Включає кілька розділів, які тим чи іншим способом впливають на
+розташування вмісту виділеної клітинки (або декількох клітинок).</p>
+<p><em><u>Вкладка Шрифт</u></em></p>
+<p>На цій вкладці розміщені опції, за допомогою яких можна задавати тип і
+розмір шрифту, накреслення, колір і різноманітні ефекти, як і в
+текстовому редакторі Word.</p>
+<p><em><u>Вкладка Межа</u></em></p>
+<p>При форматуванні таблиці даних на робочому аркуші є можливість
+встановити обрамлення клітинок, тому що при виводі таблиць на друк рамки
+є необхідним атрибутом їхнього зовнішнього вигляду.</p>
+<p><em><u>Вкладка Вигляд</u></em></p>
+<p>За допомогою параметрів даної вкладки можна встановлювати колір заливки
+для вибраної клітинки, а також тип візерунку, який при цьому буде
+використовуватися (ця процедура повністю аналогічна встановленню заливки
+у Word).</p>
+<p><em><u>Вкладка Захист</u></em></p>
+<p>Опції цієї вкладки дозволяють задати режим захисту клітинки від змін, а
+також вибрати режим, при якому в рядку формул не буде відображатися
+формула, введена в клітинку.</p>
+<p>Дія команди <em>Правка / Знайти</em> поширюється на виділений фрагмент або на
+весь робочий аркуш, якщо фрагмент не виділено.</p>
+<p>Результатом роботи команди <em>Знайти</em> при пошуку указаного слова (або
+сполучення символів) є перша виділена клітинка, що містить задане слово.</p>
+</section>
+<section id="id2">
+<h2><strong>Засоби обробки даних</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Щоб відсортувати таблицю за зростанням (від А до Я; від 0 до 9) або за
+спаданням (від Я до А; від 9 до 0) даних вказаного стовпця, достатньо
+вказати клітинку в стовпці сортування та натиснути кнопку <em>Сортувати за
+зростанням</em> або <em>Сортувати за спаданням</em> на панелі інструментів
+<em>Стандартна</em>.</p>
+<p>З метою виконання сортування клітинок таблиці у двох або трьох стовпцях
+в Excel використовується команда <em>Сортування</em> меню <em>Дані</em>.</p>
+</section>
+<section id="id3">
+<h2><strong>Робота з формулами та функціями</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p><em>Формулою</em> в Excel називається послідовність символів, що починається зі
+знаку рівності ( = ) та містить обчислювані елементи (операнди) й
+оператори.</p>
+<p><em>Посилання</em> в редакторі Excel однозначно визначають клітинку таблиці або
+групу клітинок робочого аркушу.</p>
+<p><em>Функції</em> в Excel являють собою готові вбудовані формули та
+застосовуються для виконання певних обчислень у робочих книгах.</p>
+<p>Для зручності роботи користувача при будуванні формул функції в Excel
+розбиті за категоріями: функції керування базами даних і списками,
+функції дати та часу, а також фінансові, статистичні, текстові,
+математичні та логічні функції.</p>
+<p>У записі функції обов’язково повинні бути дужки, що відкриваються та
+закриваються, при цьому не можна вставляти пробіли між назвою функції та
+дужками, інакше це буде помилкою й Excel видасть повідомлення про
+помилку.</p>
+<p>Майстер функцій викликається командою меню <em>Вставка / Функція</em> або
+натисканням кнопки <em>Вставка функції</em> у рядку формул.</p>
+<p>Для редагування формули необхідно виконати такі операції:</p>
+<ol class="arabic simple">
+<li><p>Виділити потрібну клітинку.</p></li>
+<li><p>Клацнути мишею в рядку формул або натиснути клавішу <strong>F2</strong>.</p></li>
+<li><p>Внести всі необхідні зміни.</p></li>
+<li><p>Після внесення у формулу всіх необхідних змін натиснути кнопку <em>ОК</em>.</p></li>
+</ol>
+<p>Якщо формула для даної клітинки не може бути правильно обчислена, то
+Excel відображає у клітинці значення помилки.</p>
+<p>При копіюванні формули в іншу клітинку відносні посилання будуть змінені
+відповідним чином.</p>
+</section>
+<section id="id4">
+<h2><strong>Категорії функцій</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3><strong>Математичні функції</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ROUND – виконує округлення числа до вказаної кількості десяткових
+розрядів;</p></li>
+<li><p>MOD – повертає залишок від ділення аргументу на дільник;</p></li>
+<li><p>TRUNC – зрізує число до цілого, відкидаючи дробову частину, після чого
+залишається ціле число;</p></li>
+<li><p>PRODUCT – перемножує числа, задані як аргументи, і повертає їхній
+добуток;</p></li>
+<li><p>SUM – повертає суму всіх чисел, що входять у список аргументів;</p></li>
+<li><p>SUMIF – підсумовує значення у клітинках, специфікованих заданим
+критерієм.</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3><strong>Статистичні функції</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>MAX – повертає максимальне значення зі списку аргументів;</p></li>
+<li><p>MIN – визначає найменше значення в списку аргументів;</p></li>
+<li><p>AVERAGE – обчислює середнє (арифметичне) своїх аргументів;</p></li>
+<li><p>COUNT – підраховує кількість чисел у списку аргументів;</p></li>
+<li><p>COUNTIF – визначає в діапазоні кількість непустих клітинок, що
+задовольняють заданій умові;</p></li>
+<li><p>COUNTA – обчислює кількість непустих значень у списку аргументів;</p></li>
+<li><p>COUNTBLANK – підраховує кількість пустих клітинок у діапазоні.</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3><strong>Текстові функції</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>LEN – повертає кількість символів у текстовому рядку;</p></li>
+<li><p>REPLACE – заміняє частину текстового рядка на інший текстовий рядок;</p></li>
+<li><p>VALUE – перетворює текст у число;</p></li>
+<li><p>LEFT – повертає перші (крайні ліві) символи текстового рядка;</p></li>
+<li><p>FIND – знаходить входження одного текстового рядка в інший рядок і
+повертає номер символу, з якого починається перше входження шуканого
+рядка;</p></li>
+<li><p>REPT – повторює текст задану кількість разів;</p></li>
+<li><p>RIGHT – повертає останні (крайні праві) символи текстового рядка;</p></li>
+<li><p>UPPER – робить усі літери в тексті великими;</p></li>
+<li><p>LOWER – перетворює символи в текстовому рядку в нижній регістр;</p></li>
+<li><p>MID – повертає задану кількість символів з рядку тексту, починаючи з
+указаної позиції;</p></li>
+<li><p>TRIM – видаляє з тексту всі пробіли, за винятком одиночних пробілів
+між словами;</p></li>
+<li><p>CONCATENATE – поєднує кілька текстових елементів у один.</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3><strong>Логічні функції</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>В Excel існують такі логічні функції: IF, AND, OR, TRUE, FALSE, NOT.</p>
+</section>
+</section>
+<section id="id9">
+<h2><strong>Діаграми та графіки</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Для представлення даних у таблиці у графічному вигляді використовується
+<em>майстер діаграм</em>, що викликається за допомогою кнопки <em>Майстер
+діаграм</em>, розташованої на панелі інструментів <em>Стандартна</em>.</p>
+<p>Будування діаграми складається з вибору типу майбутнього зображення;
+вибору адрес клітинок, з яких буде здійснюватися вибірка даних для
+будування рядів даних, їхніх імен і підписів по осі Х; установлюються
+такі параметри діаграми, як заголовки та підписи осей, а також формати
+допоміжних елементів діаграми ( координатної сітки, легенди, таблиці
+даних ); установка параметрів розміщення діаграми.</p>
+<p>Щоб відредагувати діаграму, слід перейти в режим редагування діаграми за
+допомогою подвійного клацання миші на ній.</p>
+<p>Операція форматування для будь – яких об’єктів виконується за такою
+схемою:</p>
+<ol class="arabic simple">
+<li><p>Для необхідного об’єкту клацанням правої кнопки викликається
+контекстне меню.</p></li>
+<li><p>Вибирається команда форматування.</p></li>
+</ol>
+<p>Для зміни типу створеної діаграми необхідно виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Відобразити для діаграми контекстне меню, клацнувши на ній правою
+кнопкою миші.</p></li>
+<li><p>У списку команд контекстного меню вибрати команду <em>Тип діаграми</em>,
+після цього з’явиться вікно з показаними зразками доступних типів
+діаграм.</p></li>
+<li><p>Вибрати тип діаграми за допомогою подвійного клацання миші або одним
+клацанням на зображенні необхідного типу з наступним натисканням
+клавіші <strong>Enter</strong>.</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2><strong>Оформлення сторінок і друк документу</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Після створення таблиці користувач може її переглянути з різним ступенем
+збільшення (від 10 % до 400 %).</p>
+<p>Параметри сторінок, що будуть друкуватися, встановлюються у діалоговому
+вікні <em>Параметри сторінки</em>.</p>
+<p><em><u>Вкладка Сторінка</u></em> – для встановлення розміру сторінки, її
+орієнтації, масштабування тощо.</p>
+<p><em><u>Вкладка Поля</u></em> – для того, щоб встановити відступи від країв
+аркушу паперу до тексту.</p>
+<p><em><u>Вкладка Колонтитули</u></em> – у верхній частині даного вікна
+відображається вміст верхнього колонтитулу, а в нижній – нижнього
+колонтитулу (якщо такі є).</p>
+<p><em><u>Вкладка Аркуш</u></em> – можна задавати різні параметри друку, діапазон,
+друкування (блок клітинок або вказані рядки та стовпці) тощо.</p>
+<p>Перейти в режим попереднього перегляду можна або за допомогою команди
+<em>Файл / Попередній перегляд</em>, або натиснувши кнопку <em>Попередній
+перегляд</em> на панелі інструментів <em>Стандартна</em>.</p>
+<p>Як правило, щоб роздрукувати з редактору Excel увесь документ, достатньо
+натиснути кнопку <em>Друк</em> панелі <em>Стандартна</em>, попередньо підготувавши
+принтер.</p>
+</section>
+<section id="id11">
+<h2><strong>Настройка Excel</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Багато властивостей редактора Excel можна настроїти за допомогою вікна
+<em>Параметри</em>, яке викликається командою <em>Сервіс / Параметри</em>.</p>
+<p><em><u>Показувати</u></em></p>
+<p>Цей розділ містить чотири прапорці, кожний з яких визначає виведення на
+екран того чи іншого елементу (або встановлює режим відображення):</p>
+<ul class="simple">
+<li><p><em>область завдань</em> – відображає при запуску Excel область завдань у
+вікні редактора;</p></li>
+<li><p><em>рядок формул</em> – показує у верхній частині робочого аркушу рядок
+формул;</p></li>
+<li><p><em>рядок стану</em> – виводить у нижній частині вікна Excel рядок стану;</p></li>
+<li><p><em>вікна на панелі завдань</em> – установлює режим, при якому на панелі
+завдань Windows виводяться значки, що відповідають книгам і вікнам
+Excel (тобто для кожної книги та вікна – свій значок на панелі
+завдань).</p></li>
+</ul>
+<p><em><u>Примітки</u></em></p>
+<p>Даний розділ служить для вибору режиму відображення приміток.</p>
+<p><em><u>Об’єкти</u></em></p>
+<p>Опції цього розділу впливають на відображення графічних об’єктів:</p>
+<ul class="simple">
+<li><p><em>показувати</em> – виводить на екран усі розташовані на робочому аркуші
+графічні об’єкти (малюнки, діаграми та т.п.);</p></li>
+<li><p><em>лише контури</em> – показує замість графічних об’єктів тільки їхні
+контури у вигляді сірих прямокутників (застосовується для збільшення
+швидкості переміщення по робочому аркушу);</p></li>
+<li><p><em>не показувати</em> – усі графічні об’єкти не відображаються на аркуші.</p></li>
+</ul>
+<p><em><u>Параметри вікна</u></em></p>
+<p>У цьому розділі містяться опції керування параметрами вигляду вікна:</p>
+<ul class="simple">
+<li><p><em>авто розбивка на сторінки</em> – показує на екрані роздільники сторінок,
+розташування яких на робочому аркуші автоматично визначається
+редактором Excel;</p></li>
+<li><p><em>формули</em> – у клітинці виводиться безпосередньо текст формули замість
+значення, що обчислюється згідно з нею;</p></li>
+<li><p><em>сітка</em> – відображає на екрані сітку, що ділить робочий аркуш на
+клітинки;</p></li>
+<li><p><em>заголовки рядків і стовпців</em> – показує назви стовпців (А, В, С, …)
+і номери рядків (1, 2, 3, …);</p></li>
+<li><p><em>символи структури</em> – відображає на екрані символи структури
+(групування);</p></li>
+<li><p><em>нульові значення</em> – якщо вміст клітинки дорівнює нулю, то він також
+буде відображатися на екрані;</p></li>
+<li><p><em>горизонтальна смуга прокрутки</em> – виводить горизонтальну смугу
+прокрутки;</p></li>
+<li><p><em>вертикальна смуга прокрутки</em> – показує вертикальну смугу прокрутки;</p></li>
+<li><p><em>ярлики аркушів</em> – відображає в нижній частині робочої області Excel
+ярлички для аркушів, розміщених у відкритій книзі (наприклад, у новій
+книзі – це <em>Аркуш 1, Аркуш 2</em> й <em>Аркуш 3</em>);</p></li>
+<li><p><em>колір ліній сітки</em> – дозволяє вибрати колір сітки на аркуші.</p></li>
+</ul>
+<p>При роботі в Excel дуже часто виникає ситуація, коли змінюється вміст
+клітинок, що використовуються у тих чи інших формулах на робочому
+аркуші.</p>
+<p>Група параметрів <em>Обчислення</em> служить для вибору способів обчислення в
+редакторі Excel:</p>
+<ul class="simple">
+<li><p><em>автоматично</em> – формули автоматично перераховуються при зміні значень,
+самих формул або назв;</p></li>
+<li><p><em>автоматично крім таблиць</em> – виконує автоматичне перерахування усіх
+зв’язаних формул, за винятком таблиць підстановки;</p></li>
+<li><p><em>вручну</em> – перерахування виконується тільки при натисканні кнопок
+<em>Перерахунок</em> (F9) або <em>Перерахунок аркуша</em>.</p></li>
+</ul>
+<p>Редактор Excel має можливість настройки параметрів правки, які задають
+той чи інший порядок дій при внесенні змін у робочий аркуш, таких як
+редагування клітинок, переміщення об’єктів у клітинках, автозаповнення
+тощо.</p>
+<p>Вкладка <em>Правка</em> має тільки один розділ, у якому знаходяться усі
+настройки для режиму правки:</p>
+<ul class="simple">
+<li><p><em>Правка безпосередньо у клітинці</em> – дозволяє вносити зміни
+безпосередньо у клітинці при виконанні на ній подвійного клацання (без
+використання рядка формул);</p></li>
+<li><p><em>Перетягування клітинок</em> – дає можливість „поширювати” значення у
+клітинці на необхідний діапазон шляхом перетаскування потрібної
+клітинки за відповідний маркер у її правому нижньому куті;</p></li>
+<li><p><em>Попереджати перед перезаписом клітинок</em> – у випадку простого
+перетаскування клітинки (коли над нею з’являється вказівник у вигляді
+стрілки) в іншу клітинку робочого аркушу, де вже записане якесь
+значення, з’явиться відповідне попередження про перезапис;</p></li>
+<li><p><em>Розширювати формати та формули у діапазонах даних</em> – при додаванні
+клітинок у кінець списку для них автоматично передбачається такий
+самий тип форматування, що й для попередніх клітинок діапазону
+(виконується тільки при збігу форматів омтанніх трьох клітинок
+діапазону);</p></li>
+<li><p><em>Автоматичний ввід відсотків</em> – якщо для клітинки задано процентний
+формат, то її значення буде автоматично множитися на 100.</p></li>
+</ul>
+<p>В Excel є ряд параметрів, які складно віднести до певної категорії (або
+категорій), і тому вони винесені на вкладку <em>Загальні</em>.</p>
+<p>Настройки, які розташовані на цій вкладці:</p>
+<ul class="simple">
+<li><p><em>Стиль посилань R1С1</em> – установлює режим, при якому посилання на
+клітинки задаються не у форматі А1, а у форматі R1С1, тобто замість
+буквенних заголовків у робочій книзі будуть цифри, як і в номерах
+рядків;</p></li>
+<li><p><em>Ігнорувати DDE</em> – запити від інших додатків – всі запити динамічного
+обміну даними (DDE – запити) від інших додатків будуть ігноруватися;</p></li>
+<li><p><em>Виринаючі підказки для функцій</em> – виведення короткого опису кнопок і
+полів на панелях інструментів при наведенні на них вказівника миші;</p></li>
+<li><p><em>Пам’ятати список файлів, до</em> – встановлює кількість файлів, що раніше
+відкривалися, назви яких будуть відображатися у меню <em>Файл</em> для їх
+швидкого повторного відкриття;</p></li>
+<li><p><em>Пропонувати заповнення властивостей файлу</em> – при збереженні нових
+робочих книг Excel буде автоматично пропонувати заповнити їхні
+властивості;</p></li>
+<li><p><em>Звуковий супровід подій</em> – передбачає озвучування системних подій,
+наприклад відкриття або збереження файлів;</p></li>
+<li><p><em>Панорамування за допомогою IntelliMouse</em> – дозволяє використо­вува­ти
+коліщатко миші (якщо воно є) для зміни масштабу робочого аркушу;</p></li>
+<li><p><em>Кількість аркушів у робочій книзі</em> – задає для кожної створюваної
+книги кількість розміщених у ній аркушів;</p></li>
+<li><p><em>Стандартний шрифт</em> – установлює шрифт, що використовується за
+замовчуванням при вводі даних у клітинки робочого аркушу;</p></li>
+<li><p><em>Розмір</em> – задає розмір шрифту, що використовується за замовчуванням;</p></li>
+<li><p><em>Робочий каталог</em> – установлює шлях, по якому перебуває робочий
+каталог, тобто задає папку, у якій Excel за замовчуванням пропонує
+зберігати та відкривати файли;</p></li>
+<li><p><em>Папка автозавантаження</em> – задає шлях до папки з документами, які
+необхідно автоматично відкривати на початку роботи з Excel (це повинні
+бути документи, які Excel зможе прочитати, наприклад робочі книги);</p></li>
+<li><p><em>Ім’я користувача</em> – дозволяє задати (або змінити) ім’я користувача,
+що, зокрема, вказується у властивостях документу Excel.</p></li>
+</ul>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><strong>ВСТУП</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><strong><u>Лабораторна робота № 1</u></strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel"><strong>Знайомство з Excel</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Введення та редагування даних</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Засоби обробки даних</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Робота з формулами та функціями</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Категорії функцій</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Математичні функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Статистичні функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Текстові функції</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><strong>Логічні функції</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><strong>Діаграми та графіки</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><strong>Оформлення сторінок і друк документу</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><strong>Настройка Excel</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Мартинюк С.В., Мартинюк О.В., Ковдриш В.В.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

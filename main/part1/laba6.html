@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk-UA" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Лабораторна робота № 6 &#8212; Методичні рекомендації</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a31ffe79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=0958edf7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part1/laba6';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <script src="../_static/version-switcher.js?v=364a2503"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="Лабораторна робота № 7" href="laba7.html" />
+    <link rel="prev" title="Текстовий процесор Microsoft Word" href="ch3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk-UA"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-4"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-4"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-4"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-4">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Методичні рекомендації</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part1.html">Частина 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1.html"><strong><u>Основи роботи з комп’ютером</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch2.html"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba1.html"><strong><u>Лабораторна робота №1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba2.html"><strong><u>Лабораторна робота № 2</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba3.html"><strong><u>Лабораторна робота № З</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3.html"><strong><u>Текстовий процесор Microsoft Word</u></strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba7.html"><strong><u>Лабораторна робота № 7</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba8.html"><strong><u>Лабораторна робота № 8</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba9.html"><strong><u>Лабораторна робота № 9</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba10.html"><strong><u>Лабораторна робота № 10</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba11.html"><strong><u>Лабораторна робота № 11</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba12.html"><strong><u>Лабораторна робота № 12</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba13.html"><strong><u>Лабораторна робота № 13</u></strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2.html">Частина 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch1.html"><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba1.html"><strong><u>Лабораторна робота № 1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba2-3.html"><strong><u>Лабораторні роботи № 2-3</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch2.html"><strong>Основи роботи в мережі Інтернет</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch3.html"><strong>MS Office: PowerPoint</strong></a></li>
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-5"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-5"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-5"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-5">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part1/laba6.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><u>Лабораторна робота № 6</u></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Тема</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Мета</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Теоретичні відомості</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Словник</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Хід роботи</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o-6">
+<h1><strong><u>Лабораторна робота № 6</u></strong><a class="headerlink" href="#o-6" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><strong>Тема</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>MS Word. Створення документа.</p>
+</section>
+<section id="id2">
+<h2><strong>Мета</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Уміти підготувати програму-редактор до роботи і створити нескладний
+текстовий документ.</p>
+</section>
+<section id="id3">
+<h2><strong>План</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Про пакет MS Office System.</p></li>
+<li><p>Вікно програми MS Word.</p></li>
+<li><p>Налаштування редактора.</p></li>
+<li><p>Діалогові вікна.</p></li>
+<li><p>Правила введення тексту.</p></li>
+<li><p>Деякі команди головного меню.</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2><strong>Теоретичні відомості</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Про пакет MS Office System. MS Office System 2003 — це інтегрований пакет, який містить такі програми:</p></li>
+</ol>
+<ul class="simple">
+<li><p>редактор текстів MS Word;</p></li>
+<li><p>електронну таблицю MS Excel;</p></li>
+<li><p>СКБД MS Access;</p></li>
+<li><p>конструктор презентацій MS PowerPoint;</p></li>
+<li><p>електронний секретар-організатор MS Outlook;</p></li>
+<li><p>видавничу систему MS Publisher;</p></li>
+<li><p>векторний редактор ділової графіки MS Visio;</p></li>
+<li><p>універсальний записник MS OneNote;</p></li>
+<li><p>конструктор бланків MS InfoPath;</p></li>
+<li><p>конструктор проектів MS Project;</p></li>
+<li><p>конструктор веб - сайтів MS FrontPage і ще деякі програми.</p></li>
+</ul>
+<p>Усі програми пакета можуть функціонувати незалежно.</p>
+<p>Однак ефективної роботи користувач може досягти шляхом використання
+декількох програм і експлуатації зручних механізмів обміну даними між
+ними. Усі програми мають схожі меню, принципи їх використання подібні.
+Пакет MS Office існує в різних версіях і модифікаціях, тому наповненість
+конкретного пакета програмами може бути іншою.</p>
+<p>Вивчення пакета розпочнемо з програми MS Word — текстового редактора
+(інший термін – <em>процесора</em>)<em>,</em> який призначений для створення,
+редагування і форматування текстових документів.</p>
+</section>
+<section id="id5">
+<h2><strong>Словник</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Вигляд Вид View</p>
+<p>Створити Создать New</p>
+<p>Редагувати Правка Edit</p>
+<p>Лінійка Линейка Ruler</p>
+<p>Розмітка сторінки Разметка страницы Page Layout</p>
+<p>Параметри сторінки Параметры страницы Page Setup</p>
+<p>Панелі інструментів Панели инструментов Toolbars</p>
+<p>Переноси Переносы Hyphenation</p>
+<p>Попередній перегляд Предварител.просмотр Print Preview</p>
+<p>Книжкова Книжная Portrait</p>
+<p>Сервіс/Параметри Сервис/Параметры Tools/Options</p>
+<p>Загальні Общие General</p>
+<p>Правопис Правописание Spell &amp; Grammer</p>
+<p>Мова Язык Language</p>
+<p>Зберігання Сохранение Save</p>
+<p>Межі Границы Borders</p>
+<p>Заливання Заливка Shading</p>
+<p>Буквиця Буквица Drop Cap</p>
+</section>
+<section id="id6">
+<h2><strong>Хід роботи</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Запустіть текстовий редактор і розгляньте його меню.</strong> Запуск
+рекомендується виконати за допомогою ярлика про­грами з буквою <em>W</em> чи
+офісної панелі.</p></li>
+<li><p><strong>Увімкніть Стандартну панель інструментів та Форматуван­ня і
+лінійку. Вимкніть зайві панелі. Задайте вигляд доку­мента Розмітка
+сторінки. Якщо уже все задано, то пере­йдіть до пункту 3.</strong> Вигляд →
+Панелі Інструментів → Натисніть кнопку з назвою потрібної панелі.
+Вигляд → Лінійка. Вигляд → Розмітка сторінки.</p></li>
+<li><p><strong>Задайте параметри сторінки.</strong> Файл → Параметри сторінки → На
+першій закладці Поля задайте всі чотири поля сторінки по 3 см →
+Розгорніть другу закладку Розміри паперу, клацнувши на назві, і
+переконайтеся, що формат сторінки - А4, а орієнтація - Книжкова
+(верти­кальна, в ХР цей параметр задають на першій закладці).
+За­крийте діалогове вікно Параметри сторінки, натиснувши на ОК.</p></li>
+<li><p><strong>Змініть шрифт та його розмір (наприклад, задайте шрифт Times New
+Roman Cyr, розмір 14 пунктів).</strong> Скористайтеся відповідними кнопками
+на панелі форматування. На рисунку зображено, що кнопка вирівнювання
+до лівого краю увімкнена, а кнопки вирівнювання до центру, до
+правого краю, до обох боків вимкнені.</p></li>
+<li><p><strong>Переконайтеся, що вигляд шрифту нормальний, і за­дайте спосіб
+вирівнювання тексту — до обох боків.</strong> Кнопки жирний (Ж), курсив
+(<em>К</em>), підкреслений (<u>Ч</u>) ненатиснені.</p></li>
+<li><p><strong>Перевірте, чи задані сантиметри як одиниці вимірювання на
+лінійці.</strong> Сервіс → Параметри.., → На закладці Загальні задайте
+одиниці вимірювання — сантиметри → Перейдіть на закладку ВИГЛЯД.</p></li>
+<li><p><strong>На закладці Вигляд задайте режими Показувати: а) смуги
+прокручування, б) виділення кольором, в) виринаючі підказки, г)
+область завдань, д) анімацію тексту, е) межі тексту, є) малюнки
+(рисунки).</strong></p></li>
+<li><p><strong>На закладці Правопис перевірте, чи задано параметри: Автоматично
+перевіряти орфографію і Завжди пропо­нувати заміну неправильного
+слова.</strong> Сервіс → Параметри… → На закладці Правопис задайте ці
+(перший і третій) режими.</p></li>
+<li><p><strong>Виберіть мову для перевірки правопису <em>—</em> українську чи
+російську.</strong> Сервіс → Мова → Виберіть мову зі списку —
+<u>українська</u> → ОК.</p></li>
+<li><p><strong>Задайте режим автоматичного перенесення слів.</strong> Сервіс → Мова →
+Розташування переносів → Автоматичне розташування переносів → ОК.
+Зауважимо, що для української чи російської мови цей режим без
+додаткових засобів (слов­ників чи програм, наприклад «Рута» тощо) не
+функціонує, то­му переноси часто доводиться робити вручну.</p></li>
+<li><p><strong>Задайте відступ першого рядка абзацу 1 см.</strong> Перемістіть верхній
+трикутник на лінійці праворуч на 1 см.</p></li>
+<li><p><strong>Дайте назву цьому документу — Текст1, тип файлу — doc.</strong> Файл →
+Зберегти ЯК… → Клацніть у діалоговому вікні Ім’я файлу і введіть
+текст: Текст1 → У полі Папка відшукайте і виберіть власну папку.
+Якщо треба, власну папку можна тут же створити за допомогою кнопки
+Створити папку у вікні збереження файлу. Закрийте вікно, натиснувши
+на кнопку Зберегти.</p></li>
+<li><p><strong>Уведіть текст <em>—</em> першу сторінку Модуля 2, не форматуючи його.</strong>
+Текст вводьте 20 хвилин. Розмір шрифту – 14. Переносів і
+форматування не робіть. Символи <span class="math notranslate nohighlight">\(\blacklozenge\)</span> пропустіть. Керуйтесь правилами
+введення тексту. Текст треба вводити так:</p></li>
+</ol>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Розділ II
+MS Office. Редактор текстів MS Word Практична робота № 6 Тема
+MS Word. Створення документа. Мета
+Уміти підготувати програму-редактор до роботи і ство­рити нескладний
+текстовий документ. План
+1. Про MS Office System.
+2. Вікно програми MS Word і т.д.
+</pre></div>
+</div>
+<ol class="arabic simple" start="14">
+<li><p><strong>Вирівняйте всі абзаци до обох боків.</strong> Для цього виберіть весь
+текст (Ctrl + A) і клацніть на кнопці вирівнювання до обох боків на
+панелі форматування.</p></li>
+<li><p><strong>Виконайте, де це потрібно, переноси слів вручну так, щоб рядки не
+були розрідженими.</strong> Для цього розташуйте курсор усередині першого
+слова після розрідженого рядка і натисніть на клавіші <strong>Ctrl + « -
+».</strong> Роз­ташуйте курсор після наступного складу і ще раз натисніть на
+клавіші <strong>Ctrl + « - ».</strong> Система переноситиме склади доти, доки це
+буде можливо.</p></li>
+<li><p><strong>Ознайомтесь з режимом показування недрукованих символів.</strong> Для
+цього натисніть на кнопку ¶<em>.</em> Пропуски між словами будуть позначені
+крапками, а закінчення абзаців — ¶. Ці символи на друк не
+виводяться, а призначені для аналізу якості введення тексту. Між
+словами повинен бути лише один пропуск. Усуньте зайві пропуски і
+порожні рядки (абзаци) в набраному тексті. Вимкніть режим
+показування недрукованих символів, натис­нувши ще раз на кнопку ¶.</p></li>
+<li><p><strong>Перевірте правопис і виправте помилки.</strong> Для цього натисніть на
+кнопку АБВ на стандартній панелі. Слово з помилкою буде підкреслене
+хвилястою лінією. Про­грама запропонує шляхи виправлення помилки.
+Якщо у вашій системі немає файлу-словника для вибраної мови, то
+можна перевіряти правопис лише англійського тексту.</p></li>
+<li><p><strong>Збережіть текст на диску в файлі Текст! .doc, оскільки його
+використовуватимете в наступних роботах.</strong> Файл → Зберегти.</p></li>
+<li><p><strong>До тексту допишіть таке речення з помилками: «То be or not to be,
+thet iss a quastioon». Перевірте його правопис.</strong> Програма виявить
+помилки і запропонує правильні варіанти слів.</p></li>
+<li><p><strong>Задайте час автозберігання документа — 8 хвилин.</strong> Сервіс →
+Параметри… → Уведіть число 8 у відповідне поле на закладці
+Зберігання. Не закривайте вікна Параметри.</p></li>
+<li><p><strong>Задайте два паролі: для відкриття документа і (такий самий) для
+дозволу записувати зміни у файлі. Пароль для всіх такий: 12345.</strong>
+Сервіс → Параметри… → На закладці Зберігання (а у Word ХР –
+Безпека) введіть паролі у відповідні текстові поля (паролі ви не
+побачите, на екрані під час введення висвітлюватимуться зірочки) →
+Натисніть на ОК. Програма вимагатиме підтвердження паролів —
+підтвердіть па­ролі, повторно їх увівши. Закрийте вікно Параметри,
+натис­нувши на ОК.</p></li>
+<li><p><strong>Скільки абзаців, слів і символів є у набраному тексті?</strong> Файл →
+Властивості → Статистика → ОК.</p></li>
+<li><p><strong>Збережіть текст і закрийте програму Word.</strong></p></li>
+<li><p><strong>Запустіть програму Word, відкрийте щойно створений документ Текст1
+і виконайте оздоблення тексту.</strong> Файл → Відкрити (або Пуск →
+Документи о Виберіть назву свого файлу) → Введіть паролі, щоб
+відкрити документ.</p></li>
+<li><p><strong>Рядки плану роботи залийте різними кольорами — сірим, блакитним,
+червоним.</strong> Щоб абзац чи слово були на Іншому фоні (тлі), наприклад,
+як у газеті чи журналі, потрібно їх виокремити і застосувати команду
+Межі і Заливання (закладка Заливання) з пункту Формат або натиснути
+на кнопку Заливання на панелі інструментів і вибрати потрібний колір
+фону.</p></li>
+<li><p><strong>Створіть буквиці у першому і другому абзацах теоретич­них
+відомостей.</strong> Встановіть курсор у першому абзаці і виконайте команду
+Буквиця з меню Формат. У діалоговому вікні задайте: розта­шування
+буквиці — в тексті, висота буквиці — 2 - 3 рядки.</p></li>
+<li><p><strong>Слова заголовка розділу зробіть різнокольоровими і весь заголовок
+помістіть у прямокутну рамку.</strong> Виокремлюйте слова мишею і
+користуйтеся кнопкою задання кольору шрифту. Виокремте заголовок і
+застосуйте кнопку Зовнішні межі чи команду Формат → Межі…</p></li>
+<li><p><strong>Зліквідуйте захист паролями.</strong> Сервіс → Параметри… → Закладка
+Зберігання або Безпека → Вилучіть паролі клавішею Del у текстових
+полях → ОК.</p></li>
+<li><p><strong>Збережіть файл під новою назвою Текст2. Продемон­струйте його
+викладачеві.</strong></p></li>
+<li><p><strong>Закрийте вікна. Закінчіть роботу.</strong></p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><strong><u>Текстовий процесор Microsoft Word</u></strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba7.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><strong><u>Лабораторна робота № 7</u></strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Тема</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Мета</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>План</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Теоретичні відомості</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Словник</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Хід роботи</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Мартинюк С.В., Мартинюк О.В., Ковдриш В.В.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

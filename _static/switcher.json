@@ -1,0 +1,17 @@
+[
+  {
+    "name": "latest",
+    "version": "latest",
+    "url": "../latest/"
+  },
+  {
+    "name": "main",
+    "version": "main",
+    "url": "../main/"
+  },
+  {
+    "name": "v2009",
+    "version": "v2009",
+    "url": "../v2009/"
+  }
+]

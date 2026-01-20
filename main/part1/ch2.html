@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk-UA" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Основи роботи в Microsoft Windows XP &#8212; Методичні рекомендації</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a31ffe79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=0958edf7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part1/ch2';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <script src="../_static/version-switcher.js?v=364a2503"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="Лабораторна робота №1" href="laba1.html" />
+    <link rel="prev" title="Основи роботи з комп’ютером" href="ch1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk-UA"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-4"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-4"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-4"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-4">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Методичні рекомендації</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part1.html">Частина 1</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1.html"><strong><u>Основи роботи з комп’ютером</u></strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba1.html"><strong><u>Лабораторна робота №1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba2.html"><strong><u>Лабораторна робота № 2</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba3.html"><strong><u>Лабораторна робота № З</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3.html"><strong><u>Текстовий процесор Microsoft Word</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba7.html"><strong><u>Лабораторна робота № 7</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba8.html"><strong><u>Лабораторна робота № 8</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba9.html"><strong><u>Лабораторна робота № 9</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba10.html"><strong><u>Лабораторна робота № 10</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba11.html"><strong><u>Лабораторна робота № 11</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba12.html"><strong><u>Лабораторна робота № 12</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba13.html"><strong><u>Лабораторна робота № 13</u></strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part2.html">Частина 2</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part2/intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch1.html"><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba1.html"><strong><u>Лабораторна робота № 1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba2-3.html"><strong><u>Лабораторні роботи № 2-3</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch2.html"><strong>Основи роботи в мережі Інтернет</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part2/ch3.html"><strong>MS Office: PowerPoint</strong></a></li>
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-5"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-5"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-5"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-5">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part1/ch2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><u>Основи роботи в Microsoft Windows XP</u></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Запуск додатків</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Завершення роботи додатків</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows"><strong>Буфер обміну Windows</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Провідник Windows</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Настроювання Провідника</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Керування файлами та папками</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Відновлення вилучених файлів</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Пошук інформації</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><strong>Стандартні програми</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paint"><strong>Графічний редактор Paint</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-xp"><strong>Настройка Windows XP</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><strong>Настройка панелі завдань</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><strong>Настройка параметрів екрану</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><strong>Настройка миші</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><strong>Настроювання клавіатури</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><strong>Звуковий супровід системних подій</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><strong>Типи облікових записів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><strong>Створення облікового запису</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16"><strong>Використання шрифтів</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><strong>Типи шрифтів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18"><strong>Керування шрифтами</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19"><strong>Керування принтерами</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><strong>Друк із додатків.</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21"><strong>Диспетчер друку</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22"><strong>Установка та видалення принтерів</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="microsoft-windows-xp">
+<h1><strong><u>Основи роботи в Microsoft Windows XP</u></strong><a class="headerlink" href="#microsoft-windows-xp" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2><strong>Запуск додатків</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p><em><u>За допомогою меню Пуск.</u></em></p>
+<p><em><u>За допомогою ярликів.</u></em></p>
+<p><em><u>У вікні Мій комп’ютер.</u></em></p>
+</section>
+<section id="id2">
+<h2><strong>Завершення роботи додатків</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Закрити будь – яку програму можна одним із таких способів:</p>
+<ul class="simple">
+<li><p>натиснути кнопку <em>Закрити</em> в правому верхньому куті програмного вікна;</p></li>
+<li><p>вибрати команду меню <em>Файл / Вихід</em>;</p></li>
+<li><p>натиснути комбінацію клавіш <strong><kbd class="kbd docutils literal notranslate">Alt</kbd>+<kbd class="kbd docutils literal notranslate">F4</kbd></strong>.</p></li>
+</ul>
+</section>
+<section id="windows">
+<h2><strong>Буфер обміну Windows</strong><a class="headerlink" href="#windows" title="Link to this heading">#</a></h2>
+<p>Буфер обміну Windows являє собою спеціальну область пам’яті, до якої
+можуть звертатися всі додатки, записуючи в нього та зчитуючи з нього
+дані.</p>
+<p><em><u>Команди роботи з буфером</u></em> – у більшості додатків Windows
+виконуються за допомогою меню <em>Правка</em>.</p>
+<p><em><u>Копіювання екрану в буфер</u></em> – за допомогою клавіші <strong>Print
+Screen</strong>.</p>
+</section>
+<section id="id3">
+<h2><strong>Провідник Windows</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Це спеціальна програма у Windows для виконання звичайних операцій над
+файлами: збереження, перейменування, видалення, копіювання, переміщення
+тощо.</p>
+</section>
+<section id="id4">
+<h2><strong>Настроювання Провідника</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p><em><u>Зміна ширини панелей</u></em> – за допомогою вузької сірої смужки між
+лівою та правою панелями Провідника.</p>
+<p><em><u>Рядок стану</u></em> – найнижчий рядок вікна Провідника з додатковою
+інформацією про виділений об’єкт.</p>
+<p><em><u>Панелі інструментів</u></em> – її кнопки виконують ті ж дії, що і деякі
+команди меню.</p>
+<p><em><u>Спосіб відображення значків</u></em> – файли та папки можуть бути
+представлені у вигляді <em>крупних і дрібних значків, списку та таблиці.</em></p>
+<p><em><u>Сортування й упорядкування значків</u></em> – через меню <em>Вигляд /
+Упорядкувати значки.</em></p>
+</section>
+<section id="id5">
+<h2><strong>Керування файлами та папками</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p><em><u>Виділення файлів і папок</u></em> – одинарним клацанням миші.</p>
+<p><em><u>Створення нової папки</u></em> – за допомогою контекстного меню після
+клацання правою кнопкою миші на вільному місці у правій частині
+Провідника.</p>
+<p><em><u>Переміщення та копіювання файлів і папок</u></em> – з використанням
+буферу обміну або перетаскуванням значків мишею.</p>
+<p><em><u>Перейменування файлів і папок</u></em> – за допомогою контекстного меню.</p>
+<p><em><u>Видалення файлів і папок</u></em> – за допомогою контекстного меню.</p>
+</section>
+<section id="id6">
+<h2><strong>Відновлення вилучених файлів</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>Вилучені файли, які попали у папку <em>Кошик,</em> можна відновити за допомогою
+команди <em>Відновити</em> меню <em>Файл</em>.</p>
+<p><em><u>Очищення Кошика</u></em> – команда меню <em>Файл / Очистити кошик.</em></p>
+</section>
+<section id="id7">
+<h2><strong>Пошук інформації</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Щоб викликати інтегрований засіб для пошуку різної інформації, потрібно
+натиснути відповідну кнопку на панелі інструментів Провідника або
+скористатися комбінацією клавіш <strong>Ctrl + E</strong> .</p>
+</section>
+<section id="id8">
+<h2><strong>Стандартні програми</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="paint">
+<h3><strong>Графічний редактор Paint</strong><a class="headerlink" href="#paint" title="Link to this heading">#</a></h3>
+<p>Paint – найпростіший графічний редактор, призначений для створення та
+редагування растрових зображень в основному форматі Windows (ВМР) і
+форматах, використовуваних у мережі Інтернет (GIF i JPEG).</p>
+<p><em><u>Панель інструментів Paint.</u></em> Щоб малювати, зафарбовувати,
+змінювати колір, робити написи, стирати й ін. у програмі Paint,
+необхідно вибрати потрібний інструмент.</p>
+<p><em><u>Додавання тексту –</u></em> виконується з використанням інструменту
+<em>Текст.</em></p>
+<p><em><u>Масштаб малюнку</u></em> – цей інструмент служить для збільшення
+масштабу відображення поточного малюнка.</p>
+<p><em><u>Виділення області малюнка</u></em> – дозволяє виділити фрагмент –
+довільну частину малюнку, обмежену побудованою рамкою.</p>
+<p><em><u>Операції з малюнком</u></em> – за допомогою команд меню <em>Малюнок</em> можна
+віддзеркалювати, розтягувати, стискати, збільшувати або нахиляти
+виділені фрагменти малюнка.</p>
+</section>
+</section>
+<section id="windows-xp">
+<h2><strong>Настройка Windows XP</strong><a class="headerlink" href="#windows-xp" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h3><strong>Настройка панелі завдань</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p><em><u>Переміщення та зміна розмірів</u></em> – підвести курсор до її краю.</p>
+<p><em><u>Додавання елементів на панель Швидкий запуск</u></em> – перенести ярлик
+програми.</p>
+<p><em><u>Параметри панелі завдань</u></em> – викликати вікно властивостей панелі
+завдань.</p>
+<p><em><u>Настройка стандартного меню</u></em> – можна налаштувати вигляд значків,
+що будуть відображатися в меню <em>Пуск</em>.</p>
+<p><em><u>Настройка класичного меню</u></em> – можна вибрати додаткові параметри
+меню <em>Пуск</em>, установивши відповідні прапорці.</p>
+</section>
+<section id="id10">
+<h3><strong>Настройка параметрів екрану</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Пункт <em>Оформлення та теми</em> дозволяє задати візерунок або малюнок, що
+буде виводитися на робочому столі, колірну схему для елементів вікон,
+екранну заставку та технічні параметри монітору та відеоадаптору.</p>
+<p><em><u>Зміна теми оформлення</u></em> – перша вкладка властивостей екрану
+<em>Теми</em>.</p>
+<p><em><u>Установка фонового візерунку або малюнку</u></em> – вкладка <em>Робочий
+стіл</em> діалогового вікна <em>Екран – Властивості</em>.</p>
+<p><em><u>Вибір екранної заставки</u></em> – на вкладці <em>Заставка</em>.</p>
+<p><em><u>Настройка колірних схем</u></em> – можна скористатися однією із
+заздалегідь розроблених колірних схем або сформувати свою власну.</p>
+<p><em><u>Зміна відеопараметрів екрану</u></em> – на вкладці П<em>араметри</em> вікна
+властивостей екрану.</p>
+</section>
+<section id="id11">
+<h3><strong>Настройка миші</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Для зміни параметрів миші служить пункт <em>Миша</em> в розділі <em>Принтери й
+інше устаткування</em> панелі керування.</p>
+<p><em><u>Кнопки миші</u></em> – дана вкладка дозволяє вибрати одну з двох
+конфігурацій кнопок миші: для правші (звичайна) або для лівші.</p>
+<p><em><u>Вказівними</u></em> – для зміни розмірів і форми вказівників, що
+відповідають станові додатку та виконуваним за допомогою миші діям.</p>
+<p><em><u>Параметри вказівника</u></em> – регулюється швидкість пересування
+вказівника на екрані залежно від переміщення миші по килимку.</p>
+<p><em><u>Коліщатко</u></em> – можна задати кількість рядків, на яку буде
+переміщуватися текст при повороті коліщатка один раз.</p>
+</section>
+<section id="id12">
+<h3><strong>Настроювання клавіатури</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Для зміни параметрів клавіатури – пункт <em>Клавіатура</em> у розділі <em>Принтери
+й інше устаткування</em> панелі керування.</p>
+</section>
+<section id="id13">
+<h3><strong>Звуковий супровід системних подій</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Пункт <em>Звуки й аудіопристрої</em> у категорії <em>Звук, мовлення й
+аудіопристрої</em> панелі керування.</p>
+</section>
+<section id="id14">
+<h3><strong>Типи облікових записів</strong><a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p><em><u>Обліковий запис адміністратора</u></em> – призначений для тих, хто може
+вносити зміни на рівні системи, установлювати програми та мати доступ до
+всіх файлів на комп’ютері.</p>
+<p><em><u>Обліковий запис із обмеженими правами</u></em> – призначається для
+користувачів, яким повинна бути заборонена зміна більшості настройок
+комп’ютера та видалення важливих файлів.</p>
+<p><em><u>Обліковий запис гостя</u></em> – використовується у тому випадку, якщо
+користувач не має облікового запису на комп’ютері.</p>
+</section>
+<section id="id15">
+<h3><strong>Створення облікового запису</strong><a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Для створення облікового запису необхідно використати в панелі керування
+категорію <em>Облікові записи користувачів</em>.</p>
+</section>
+</section>
+<section id="id16">
+<h2><strong>Використання шрифтів</strong><a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<section id="id17">
+<h3><strong>Типи шрифтів</strong><a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<p><em><u>Растрові шрифти</u></em></p>
+<p><em><u>Векторні шрифти</u></em></p>
+<p><em><u>Контурні шрифти</u></em></p>
+<p><em><u>Принтерні шрифти</u></em></p>
+</section>
+<section id="id18">
+<h3><strong>Керування шрифтами</strong><a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Під час інсталяції Windows XP здійснюється установка набору стандартних
+шрифтів, файли яких записуються на системний диск.</p>
+<p><em><u>Установка нових шрифтів.</u></em> Найзручніше установити новий шрифт за
+допомогою пункту <em>Шрифти</em> на панелі керування.</p>
+<p><em><u>Видалення шрифтів</u></em> – також найпростіше скористатися панеллю
+керування.</p>
+</section>
+</section>
+<section id="id19">
+<h2><strong>Керування принтерами</strong><a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<section id="id20">
+<h3><strong>Друк із додатків.</strong><a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>Для того, щоб надрукувати документ із додатку, потрібно завантажити файл
+цього документу та виконати команду <em>Файл / Друк</em>.</p>
+</section>
+<section id="id21">
+<h3><strong>Диспетчер друку</strong><a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>Засоби керування принтерами у Windows XP знаходяться у папці <em>Принтери
+та факси</em>.</p>
+<p><em><u>Установка принтера за замовчуванням</u></em> – при наявності більш
+одного принтера (на окремому комп’ютері або в локальній мережі)
+необхідно вибрати, який з них буде використовуватися за замовчуванням.</p>
+<p><em><u>Скасування друку завдань</u></em> – для очищення списку завдань друку
+служить команда <em>Принтер / Очистити чергу друку</em>.</p>
+<p><em><u>Припинення друку документу</u></em> – можна призупинити друк документу,
+якщо Диспетчер друку ще не почав відправляти цей документ на принтер або
+якщо принтер є локальним (тобто підключеним безпосередньо до Вашого
+комп’ютеру).</p>
+<p><em><u>Скасування друку документу</u></em> – для видалення документу зі списку
+документів, що друкуються, використовується команда <em>Документ /
+Скасувати</em>.</p>
+</section>
+<section id="id22">
+<h3><strong>Установка та видалення принтерів</strong><a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<p>Процес установки принтера полягає в тому, що на комп’ютер записується
+драйвер цього принтера та виконується необхідне настроювання, яке
+стосується його підключення.</p>
+<p><em><u>Видалення принтера</u></em> – для того, щоб видалити принтер із системи,
+потрібно відкрити папку <em>Принтери та факси</em> (команда меню <em>Пуск /
+Принтери та факси</em>) вибрати принтер, який необхідно видалити, і
+натиснути клавішу <strong>Delete</strong>.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ch1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><strong><u>Основи роботи з комп’ютером</u></strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="laba1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><strong><u>Лабораторна робота №1</u></strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><strong>Запуск додатків</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Завершення роботи додатків</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows"><strong>Буфер обміну Windows</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Провідник Windows</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Настроювання Провідника</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Керування файлами та папками</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Відновлення вилучених файлів</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Пошук інформації</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><strong>Стандартні програми</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paint"><strong>Графічний редактор Paint</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-xp"><strong>Настройка Windows XP</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><strong>Настройка панелі завдань</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><strong>Настройка параметрів екрану</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><strong>Настройка миші</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><strong>Настроювання клавіатури</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><strong>Звуковий супровід системних подій</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14"><strong>Типи облікових записів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><strong>Створення облікового запису</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id16"><strong>Використання шрифтів</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17"><strong>Типи шрифтів</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18"><strong>Керування шрифтами</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19"><strong>Керування принтерами</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20"><strong>Друк із додатків.</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21"><strong>Диспетчер друку</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22"><strong>Установка та видалення принтерів</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Мартинюк С.В., Мартинюк О.В., Ковдриш В.В.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+[
+  {"name": "main", "version": "main", "url": "../main/"},
+  {"name": "v2009.1", "version": "v2009.1", "url": "../v2009.1/"},
+  {"name": "v2009.2", "version": "v2009.2", "url": "../v2009.2/"}
+]

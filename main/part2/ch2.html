@@ -1,0 +1,1375 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk-UA" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Основи роботи в мережі Інтернет &#8212; Методичні рекомендації</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=a31ffe79"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../_static/translations.js?v=0958edf7"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'part2/ch2';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://volodymyr-kovdrysh.github.io/IKT/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <script src="../_static/version-switcher.js?v=364a2503"></script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="MS Office: PowerPoint" href="ch3.html" />
+    <link rel="prev" title="Лабораторна робота № 6" href="laba6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk-UA"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-3"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-3"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-3"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-3">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-4"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-4"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-4"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-4">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Методичні рекомендації</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="_static/index.pdf" title="завантажити PDF" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-solid fa-file-pdf fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">завантажити PDF</span></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../part1.html">Частина 1</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../part1/intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch1.html"><strong><u>Основи роботи з комп’ютером</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch2.html"><strong><u>Основи роботи в Microsoft Windows XP</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba1.html"><strong><u>Лабораторна робота №1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba2.html"><strong><u>Лабораторна робота № 2</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba3.html"><strong><u>Лабораторна робота № З</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/ch3.html"><strong><u>Текстовий процесор Microsoft Word</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba7.html"><strong><u>Лабораторна робота № 7</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba8.html"><strong><u>Лабораторна робота № 8</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba9.html"><strong><u>Лабораторна робота № 9</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba10.html"><strong><u>Лабораторна робота № 10</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba11.html"><strong><u>Лабораторна робота № 11</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba12.html"><strong><u>Лабораторна робота № 12</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../part1/laba13.html"><strong><u>Лабораторна робота № 13</u></strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../part2.html">Частина 2</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="intro.html"><strong>ВСТУП</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch1.html"><strong><u>Редактор електронних таблиць Microsoft Excel</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba1.html"><strong><u>Лабораторна робота № 1</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba2-3.html"><strong><u>Лабораторні роботи № 2-3</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba4.html"><strong><u>Лабораторна робота № 4</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba5.html"><strong><u>Лабораторна робота № 5</u></strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="laba6.html"><strong><u>Лабораторна робота № 6</u></strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Основи роботи в мережі Інтернет</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="ch3.html"><strong>MS Office: PowerPoint</strong></a></li>
+
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<script>
+document.write(`
+  <div class="version-switcher__container dropdown">
+    <button id="pst-version-switcher-button-5"
+      type="button"
+      class="version-switcher__button btn btn-sm dropdown-toggle"
+      data-bs-toggle="dropdown"
+      aria-haspopup="listbox"
+      aria-controls="pst-version-switcher-list-5"
+      aria-label="Version switcher list"
+    >
+      Choose version  <!-- this text may get changed later by javascript -->
+      <span class="caret"></span>
+    </button>
+    <div id="pst-version-switcher-list-5"
+      class="version-switcher__menu dropdown-menu list-group-flush py-0"
+      role="listbox" aria-labelledby="pst-version-switcher-button-5">
+      <!-- dropdown will be populated by javascript on page load -->
+    </div>
+  </div>
+`);
+</script></div>
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/part2/ch2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Основи роботи в мережі Інтернет</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Інтернет і його можливості</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Підключення до мережі Інтернет</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internet-explorer"><strong>Веб – навігатор Internet Explorer</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outlook-express"><strong>Електронна пошта й Outlook Express</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Пошукові сервери</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Безкоштовна електронна пошта</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Корисні програми</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Файлові менеджери</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-commander"><strong>Програма Total Commander</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#far"><strong>Робота з програмою Far</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><strong>Архіватори</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#winzip"><strong>WinZip</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#winrar"><strong>WinRAR</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><strong>Перегляд графічних зображень</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acdsee"><strong>Програма ACDSee</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-picture-and-fax-viewer"><strong>Windows Picture and Fax Viewer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><strong>Записування компакт – дисків</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><strong>Програвачі аудіо- та відео файлів</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#winamp"><strong>Winamp</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#audio-cd-y-mp3">Конвертування Audio CD y MP3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><strong>Словники та перекладачі</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><strong>Антивірусні програми</strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><strong>Основи роботи в мережі Інтернет</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2><strong>Інтернет і його можливості</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Всесвітня комп’ютерна мережа Інтернет з’явилася більше ніж тридцять
+років тому, дозволивши встановити постійний зв’язок між комп’ютерами з
+метою швидкого обміну інформацією.</p>
+<p>Ліва частина адреси комп’ютера показує, до якої ділянки мережі належить
+комп’ютер, а права містить точну адресу комп’ютера, який повинен
+одержати інформацію.</p>
+<p>Невід’ємна частина Інтернету, WWW (World Wide Web, у перекладі з
+англійської „всесвітня павутина”), дозволила по новому користуватися
+давно відомими в усьому світі текстовими виносками.</p>
+<p>Щоб зробити доступ до ресурсів FTP – серверів зручнішими для
+користувачів, на багатьох серверах організовано веб – інтерфейс до
+каталогів FTP – серверів, тобто загальну інформацію про файловий архів
+та опис файлів, що знаходяться в ньому, користувач одержує, працюючи із
+системою WWW, а вибравши на сторінці файл, що цікавить, копіює його
+через протокол FTP.</p>
+<p>Час доставки електронної пошти складається із двох часових проміжків:
+часу, необхідного для доставки повідомлення на поштовий сервер мережі,
+та часу від надходження кореспонденції до прочитання її одержувачем.</p>
+<p>Телеконференції можна зрівняти з гігантськими дошками оголошень, на які
+користувачі поміщають свої повідомлення, доступні для читання іншим
+користувачам, або відповіді та коментарі на раніше відправлені
+повідомлення.</p>
+</section>
+<section id="id3">
+<h2><strong>Підключення до мережі Інтернет</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>Підключення до мережі здійснюється спеціалізованими фірмами, названими
+<em>провайдерами</em>.</p>
+<p><em>Модемом</em> називається пристрій, що дозволяє обмінюватися даними між
+комп’ютерами, використовуючи різні канали зв’язку, наприклад телефонну
+лінію.</p>
+<p><em><u>Установка модему</u></em> – якщо модем не було виявлено комп’ютером, для
+його установки необхідно скористатися пунктом <em>Телефон і модем</em> у панелі
+керування.</p>
+<p>З метою створення та визначення параметрів підключення краще
+скористатися майстром нових підключень, який можна викликати з меню
+<em>Пуск</em> командою <em>Пуск / Усі Програми / Стандартні / Зв’язок / Майстер
+нових підключень</em>.</p>
+<p>У результаті активізації нового підключення буде відображено діалогове
+вікно вибраного підключення, де потрібно натиснути кнопку <em>Виклик</em>, щоб
+виконалося з’єднання з Інтернетом.</p>
+<p>Для створення нового облікового запису електронної пошти необхідно
+запустити програму Outlook Express.</p>
+</section>
+<section id="internet-explorer">
+<h2><strong>Веб – навігатор Internet Explorer</strong><a class="headerlink" href="#internet-explorer" title="Link to this heading">#</a></h2>
+<p>Веб – сторінка є звичайним текстовим файлом, в якому знаходиться не
+тільки текст, який переглядає користувач, а й спеціальні коди мови HTML,
+які називаються <em>тегами ( tags )</em>.</p>
+<p>Основною панеллю інструментів є панель <em>Звичайні кнопки</em> – за її
+допомогою виконується переважна більшість дій при навігації в Інтернеті:</p>
+<ul class="simple">
+<li><p><em>Назад</em> – завантажити попередню веб – сторінку;</p></li>
+<li><p><em>Вперед</em> – завантажити сторінку, з якої виконувалося повернення;</p></li>
+<li><p><em>Зупинити</em> – зупинити завантаження сторінки;</p></li>
+<li><p><em>Оновити</em> – оновити вміст вікна Internet Explorer;</p></li>
+<li><p><em>Додому</em> – перейти на основну сторінку;</p></li>
+<li><p><em>Пошук</em> – відкрити встановлену сторінку пошуку;</p></li>
+<li><p><em>Обране</em> – відобразити список обраних ресурсів на панелі <em>Обране</em>;</p></li>
+<li><p><em>Медіа</em> – відобразити список радіостанцій;</p></li>
+<li><p><em>Журнал</em> – відобразити список переглянутих вузлів на панелі <em>Журнал</em>.</p></li>
+</ul>
+<p>Для переходу на веб – сторінку, з якою зв’язане посилання, достатньо
+просто клацнути мишею на місці гіпертексту.</p>
+<p>Для того щоб додати посилання на поточну сторінку, слід вибрати команду
+<em>Обране / Додати до обраного</em>.</p>
+<p>У засобі <em>Журнал</em> запам’ятовуються веб – вузли, які відвідувалися
+користувачем.</p>
+</section>
+<section id="outlook-express">
+<h2><strong>Електронна пошта й Outlook Express</strong><a class="headerlink" href="#outlook-express" title="Link to this heading">#</a></h2>
+<p>При інсталяції Windows XP одночасно з Internet Explorer установлюється й
+Outlook Express, що дозволяє виконувати одержання, відправлення та
+створення листів, а також зберігати необхідні адреси в Адресній книзі.</p>
+<p>Для отримання листів з поштового сервера потрібно вибрати на панелі
+інструментів кнопку <em>Доставити пошту</em>.</p>
+<p>Для того щоб прочитати листи, що надійшли, варто зайти в папку <em>Вхідні</em>.</p>
+<p>Для створення листа потрібно клацнути на кнопці <em>Створити повідомлення</em>
+або вибрати пункт <em>Створити</em> з меню <em>Повідомлення</em>.</p>
+<p>Для відправлення повідомлення потрібно вибрати пункт <em>Відправити</em> з меню
+<em>Файл</em> або клацнути на кнопці <em>Відправити</em> на панелі інструментів.</p>
+<p>Наявність Адресної книги в Outlook Express дозволяє зберігати імена,
+адреси й іншу інформацію, що істотно полегшує процес відправлення пошти.</p>
+</section>
+<section id="id4">
+<h2><strong>Пошукові сервери</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>На серверах спеціальних пошукових служб є спеціальні програми (їх
+називають „роботами” або „павуками”), які збирають інформацію у WWW і
+повертають на свій сервер усі виявлені сторінки.</p>
+<p><a class="reference external" href="http://www.altavista.com/">http://www.altavista.com</a></p>
+<p>Одна з найцінніших функцій сторінки складного пошуку <em>Advanced</em>
+називається „критерій ранжирування результатів”.</p>
+<p><a class="reference external" href="http://www.yahoo.com/">http://www.yahoo.com</a></p>
+<p>При виконанні пошуку за допомогою Yahoo! спочатку на екран буде виведено
+список категорій, до яких відноситься запит користувача, а потім перелік
+вузлів Yahoo! І категорії, яким ці вузли відповідають.</p>
+<p><a class="reference external" href="http://www.google.com.ua/">http://www.google.com.ua</a></p>
+<p>Для простого пошуку слід набрати потрібне слово (або словосполучення) і
+натиснути кнопку <em>Пошук у Google</em>.</p>
+<p><a class="reference external" href="http://www.meta.ua/">http://www.meta.ua</a></p>
+<p>Українська пошукова система МЕТА призначена для пошуку на українських
+серверах, а також серверах з українською тематикою в усьому світі.</p>
+</section>
+<section id="id5">
+<h2><strong>Безкоштовна електронна пошта</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>Звичайно сайтами, на яких надається можливість створення безкоштовної
+поштової скриньки, є пошукові сервери й інформаційні портали.</p>
+<p><a class="reference external" href="http://www.yahoo.com/">http://www.yahoo.com</a></p>
+<p>Тут поштові адреси (обсяг поштової скриньки становить 250 Мб) мають
+такий вигляд: <em><u>ім’я</u>_&lt;користувача&#64;yahoo.com&gt;</em></p>
+<p><a class="reference external" href="http://freemail.ukr.net/">http://freemail.ukr.net</a></p>
+<p>Відкривши свою поштову скриньку, користувач побачить форму стандартного
+вигляду – у лівій частині відображається список найбільш важливих
+команд: перевірка пошти, створення нового повідомлення, відкриття папки
+<em>Вхідні</em>, робота з адресною книгою, настройка параметрів скриньки, вихід
+із системи.</p>
+<p>Посилання на інші популярні безкоштовні поштові сервери.</p>
+<p><a class="reference external" href="http://www.hotmail.com/">http://www.hotmail.com</a></p>
+<p><a class="reference external" href="http://www.mail.com/">http://www.mail.com</a></p>
+<p><a class="reference external" href="http://www.bigmir.net/">http://www.bigmir.net</a></p>
+<p><a class="reference external" href="http://www.online.com.ua/">http://www.online.com.ua</a></p>
+</section>
+<section id="id6">
+<h2><strong>Корисні програми</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h3><strong>Файлові менеджери</strong><a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<section id="total-commander">
+<h4><strong>Програма Total Commander</strong><a class="headerlink" href="#total-commander" title="Link to this heading">#</a></h4>
+<p>Панелі Total Commander призначені для відображення файлів і каталогів на
+диску, а також для виконання різних операцій над ними ( копіювання,
+переміщення, видалення ).</p>
+<p><em><u>Навігація по каталогах</u></em></p>
+<p>Щоб відкрити в кореневому каталозі диска каталог першого рівня,
+необхідно за допомогою клавіш керування курсором установити курсор на
+каталог і натиснути клавішу <strong>Enter</strong>.</p>
+<p><em><u>Створення каталогів</u></em></p>
+<p>Для створення каталогу використовується клавіша <strong>F7</strong>.</p>
+<p><em><u>Копіювання файлів і каталогів</u></em></p>
+<p>Для копіювання файлу або каталогу на інший носій інформації або в інший
+каталог необхідно виділити цей файл на на одній з панелей, а на іншій
+панелі відкрити каталог, куди буде здійснюватися копіювання, та
+натиснути <strong>F5</strong>.</p>
+<p><em><u>Переміщення файлів і каталогів</u></em></p>
+<p>При переміщенні файлів або каталогів, як і при копіюванні, необхідно
+виділити файл / каталог і натиснути клавішу <strong>F6</strong>.</p>
+<p><em><u>Видалення файлів і каталогів</u></em></p>
+<p>Для видалення файлів або каталогів використовується клавіша <strong>F8</strong>.</p>
+<p><em><u>Панель інструментів</u></em></p>
+<p>На панелі інструментів Total Commander представлені основні операції, що
+найбільш часто використовуються в програмі.</p>
+<p><em><u>Упаковування файлів</u></em></p>
+<p>Для упаковування файлу його треба виділити, а потім натиснути кнопку
+<em>Pack</em>, або скористатися комбінацією клавіш <strong>Alt + F5</strong>.</p>
+<p><em><u>Настройка мови програми</u></em></p>
+<p>Для настройки мови програми необхідно в меню <em>Configuration</em> вибрати
+команду <em>Options</em>, у результаті чого буде відкрите вікно
+<em>Configuration</em>.</p>
+</section>
+<section id="far">
+<h4><strong>Робота з програмою Far</strong><a class="headerlink" href="#far" title="Link to this heading">#</a></h4>
+<p>Програма Far є одним із найбільш популярних файлових менеджерів у світі
+й успадковує все краще від легендарного Norton Commander (NC).</p>
+<p><em><u>Можливості Far</u></em></p>
+<p>Файловий менеджер Far дозволяє:</p>
+<ul class="simple">
+<li><p>наочно зображувати вміст каталогів на дисках;</p></li>
+<li><p>створювати, перейменовувати та видаляти каталоги з їх вмістом;</p></li>
+<li><p>копіювати, перейменовувати, пересилати та видаляти файли;</p></li>
+<li><p>переглядати текстові файли, документи, створені за допомогою різних
+текстових редакторів;</p></li>
+<li><p>редагувати тексти власним редактором і підключати інші редактори;</p></li>
+<li><p>підключати додаткові модулі, призначені для розширення можливостей
+програми.</p></li>
+</ul>
+<p><em><u>Переключення мов</u></em> – за допомогою команди <em>Options / Languages</em>.</p>
+<p><em><u>Запуск програм</u></em></p>
+<p>Для запуску будь – якої програми треба виконати такі дії:</p>
+<ol class="arabic simple">
+<li><p>Вибрати програму за допомогою клавіш керування курсором.</p></li>
+<li><p>Натиснути клавішу <strong>Enter</strong>.</p></li>
+</ol>
+<p><em><u>Панелі та функціональні клавіші</u></em></p>
+<p>Для керування панелями Far використовуються такі комбінації клавіш:</p>
+<p><strong>Ctrl + O</strong> – забрати панелі з екрану або вивести на екран;</p>
+<p><strong>Ctrl + F1</strong> – забрати / вивести ліву панель;</p>
+<p><strong>Ctrl + F2</strong> – забрати / вивести праву панель;</p>
+<p><strong>Alt + F1 (Alt + F2)</strong> – вибрати для лівої (правої) панелі вміст
+зазначеного диска.</p>
+<p><em><u>Виділення групи файлів</u></em> – вибір окремого файлу, тобто поміщення
+даного файлу в групу, здійснюється натисканням клавіші <strong>Insert</strong>.</p>
+<p><em><u>Перегляд і редагування файлів</u></em> – при натисканні клавіші <strong>F3</strong>
+(<strong>F4</strong>) Far дозволяє переглянути ( редагувати ) виділений курсором
+файл.</p>
+<p><em><u>Копіювання файлів і каталогів</u></em> – треба підвести курсор до даного
+файлу або каталогу та натиснути <strong>F5</strong>.</p>
+<p><em><u>Перейменування та переміщення файлів</u></em> – вибрати потрібний файл
+або виділити групу файлів за допомогою клавіш <strong>Insert</strong> або <strong>[ + ]</strong>
+і натиснути клавішу <strong>F6</strong>.</p>
+<p><em><u>Видалення файлів</u></em> – встановити курсор на ім’я файлу або
+каталогу, натиснути клавішу <strong>F8</strong>, а потім <strong>Enter</strong>.</p>
+<p><em><u>Пошук файлів</u></em> – для швидкого пошуку файлу у всіх каталогах на
+диску слід натиснути <strong>Alt + F7</strong> і набрати ім’я файлу в першому рядку
+вікна <em>Find file</em>.</p>
+<p><em><u>Робота з каталогами</u></em> – для створення каталогу на диску слід
+натиснути клавішу <strong>F7</strong>.</p>
+<p><em><u>Настройка інтерфейсу Far</u></em> – вибрати з меню <em>Options</em> команду
+<em>Interface settings</em>, після чого буде відображене однойменне меню.</p>
+</section>
+</section>
+<section id="id8">
+<h3><strong>Архіватори</strong><a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Операція архівації передбачає стискання вмісту файлу за певним
+алгоритмом.</p>
+<section id="winzip">
+<h4><strong>WinZip</strong><a class="headerlink" href="#winzip" title="Link to this heading">#</a></h4>
+<p>Архіви, які створює архіватор WinZip, мають розширення <strong>.zip</strong>.</p>
+<p><em><u>Створення нового архіву</u></em></p>
+<p>Для створення нового архіву необхідно спочатку реалізувати одну з таких
+дій:</p>
+<ul class="simple">
+<li><p>виконати команду <em>File / New Archive</em>;</p></li>
+<li><p>натиснути сполучення клавіш <strong>Ctrl + N</strong>;</p></li>
+<li><p>вибрати кнопку <em>New</em> на панелі інструментів.</p></li>
+</ul>
+<p><em><u>Відкриття існуючого архіву</u></em> – виконати одну з наведених нижче
+дій:</p>
+<ul class="simple">
+<li><p>виконати команду <em>File / Open Archive</em>;</p></li>
+<li><p>натиснути сполучення клавіш <strong>Ctrl + O</strong>;</p></li>
+<li><p>вибрати кнопку <em>Open</em> на панелі інструментів.</p></li>
+</ul>
+<p><em><u>Додавання файлів у архів</u></em> – натиснути кнопку <em>Add</em> на панелі
+інструментів, або виконати команду меню <em>Actions / Add</em>, або натиснути
+сполучення клавіш <strong>Shift + A</strong>.</p>
+<p><em><u>Витягання файлів з архіву</u></em></p>
+<ol class="arabic simple">
+<li><p>Виділити файли, які треба витягти.</p></li>
+<li><p>Виконати команду <em>Actions / Extract</em>, або натиснути кнопку <em>Extract</em>
+на панелі інструментів, або натиснути сполучення клавіш <strong>Shift +
+E</strong>.</p></li>
+<li><p>У діалоговому вікні <em>Extract</em> вказати в рядку <em>Extract to</em> шлях до
+каталогу, в який потрібно витягти файли, або вибрати необхідний
+каталог зі списку.</p></li>
+<li><p>У групі <em>Files</em> вказати один з параметрів для витягнення:</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Selected files</em> – витягаються тільки виділені файли;</p></li>
+<li><p><em>All files</em> – витягаються усі файли, що є в архіві;</p></li>
+<li><p><em>Files</em> – витягаються вказані файли або файли, що відповідають
+вибраному шаблону.</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>Натиснути кнопку <em>Extract</em> після визначення всіх необхідних
+параметрів.</p></li>
+</ol>
+<p><em><u>Видалення файлів з архіву</u></em></p>
+<ol class="arabic simple">
+<li><p>Виділити файли, які потрібно видалити.</p></li>
+<li><p>Виконати команду <em>Actions / Delete</em>, або натиснути сполучення клавіш
+<strong>Shift + D</strong> чи клавішу <strong>Delete</strong>.</p></li>
+<li><p>У діалоговому вікні <em>Delete</em> натиснути кнопку <em>Delete</em>.</p></li>
+</ol>
+<p><em><u>Перегляд вибраного файлу в архіві</u></em> – необхідно скористатися
+кнопкою <em>View</em> на панелі інструментів, або виконати команду <em>Actions /
+View</em>, або натиснути сполучення клавіш <strong>Shift + V</strong>.</p>
+</section>
+<section id="winrar">
+<h4><strong>WinRAR</strong><a class="headerlink" href="#winrar" title="Link to this heading">#</a></h4>
+<p>Архіви, з якими за замовчуванням працює WinRAR, мають розширення
+<strong>.rar</strong>.</p>
+<p><em><u>Додавання файлів у архів (створення архіву)</u></em> – щоб додати
+виділені файли в уже наявний на диску архів (або створити новий архів,
+що містить вибрані файли), слід скористатися кнопкою <em>Add</em> панелі
+інструментів або командою <em>Commands / Add files to archive</em>.</p>
+<p><em><u>Витягання файлів з архіву</u></em> – кнопка <em>Extract to</em> панелі
+інструментів.</p>
+<p><em><u>Видалення файлів з архіву</u></em></p>
+<ol class="arabic">
+<li><p>Відкрити необхідний архів.</p></li>
+<li><p>Відмітити в ньому один або декілька файлів для видалення.</p></li>
+<li><p>Натиснути кнопку <em>Delete</em> панелі інструментів.</p>
+<p><em><u>Створення архіву, що само розпаковується</u></em></p>
+</li>
+<li><p>Відкрити архів.</p></li>
+<li><p>Скористатися кнопкою <em>SFX (SelF – eXtracting)</em> панелі інструментів.</p></li>
+<li><p>У вікні настройки архіву на вкладці <em>SFX</em> вибрати пункт <em>Add a new
+SFX module</em>.</p></li>
+<li><p>Натиснути в цьому вікні кнопку <em>ОК</em>.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="id9">
+<h2><strong>Перегляд графічних зображень</strong><a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<section id="acdsee">
+<h3><strong>Програма ACDSee</strong><a class="headerlink" href="#acdsee" title="Link to this heading">#</a></h3>
+<p>ACDSee – програма, призначена для перегляду зображень різних форматів.</p>
+<p><em><u>Панель інструментів ACDSee</u></em> – на неї винесені кнопки, що
+дозволяють працювати з файловою системою, а також викликати основні
+функції програми.</p>
+<p><em><u>Область Folder</u></em> – робота в цій області багато в чому подібна до
+роботи в Провіднику.</p>
+<p><em><u>Область Categories</u></em> – відображає набір категорій, до яких
+користувач може віднести існуючі на жорсткому диску комп’ютера графічні
+файли.</p>
+<p><em><u>Область Calendar</u></em> – призначена для того, щоб користувач міг
+орієнтуватися в колекціях графічних зображень за датою.</p>
+<p><em><u>Створення слайд – шоу</u></em> – необхідно в меню кнопки <em>Create</em>
+вибрати пункт <em>Create Slide Show</em>.</p>
+</section>
+<section id="windows-picture-and-fax-viewer">
+<h3><strong>Windows Picture and Fax Viewer</strong><a class="headerlink" href="#windows-picture-and-fax-viewer" title="Link to this heading">#</a></h3>
+<p>За замовчуванням ця програма асоціюється з усіма графічними файлами,
+тобто при подвійному клацанні мишею на графічному файлі ( у будь – якому
+файловому менеджері ) автоматично відкривається Windows Picture and Fax
+Viewer і відобразиться цей малюнок.</p>
+</section>
+<section id="id10">
+<h3><strong>Записування компакт – дисків</strong><a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Серед оптичних носіїв інформації (зокрема серед компакт – дисків)
+виділяють такі види:</p>
+<ul class="simple">
+<li><p><em>CD – ROM</em> – Compact Disk Read Only Memory (компакт – диск тільки для
+читання);</p></li>
+<li><p><em>CD</em> <em>– R</em> – Compact Disk Recordable (записуваний компакт – диск);</p></li>
+<li><p><em>CD – RW</em> – Compact Disk ReWritable (перезаписуваний компакт – диск).</p></li>
+</ul>
+<p><em><u>DVD – диски</u></em> – мають перевагу перед звичайними CD – ємність DVD
+у 24 рази більша від звичайного CD і складає до 17 Гб.</p>
+<p><em><u>Типи приводів</u></em> – для роботи з компакт – дисками названих типів
+існують спеціальні пристрої:</p>
+<ul class="simple">
+<li><p><em>CD Drive</em> – привод для читання компакт – дисків CD – ROM, записуваних
+дисків CD – R і пере записуваних дисків CD – RW;</p></li>
+<li><p><em>CD – Recordable Drive</em> – привод для читання компакт – дисків, CD – R
+i CD – RW, а також записування CD – R i CD – RW;</p></li>
+<li><p><em>CD – ReWritable Drive</em> – приводи, що можуть записувати та
+перезаписувати диски CD – RW.</p></li>
+</ul>
+<p><em><u>Швидкість роботи приводів</u></em> – для повсякденної роботи, коли
+користувач застосовує привод CD – ROM для програвання музики, перегляду
+відеофільмів та ігор, цілком достатньо приводу з швидкісною формулою від
+8х до 24х.</p>
+<p>Для швидкого створення компакт – дисків можна використовувати майстер
+Nero Express, призначений для користувачів – початківців.</p>
+<p>Загальна послідовність дій, які виконуються у процесі записування CD
+будь – якого типу:</p>
+<ol class="arabic simple">
+<li><p>Вибираємо необхідний пункт в одній із груп головного вікна програми
+Nero Express, наприклад пункт <em>Data Disc</em> у групі <em>Data</em>.</p></li>
+<li><p>З’явиться вікно <em>Disc Content (Зміст диску)</em>.</p></li>
+<li><p>При натисканні кнопки <em>Add</em> відкриється діалогове вікно вибору
+файлів і каталогів.</p></li>
+<li><p>Якщо файли, які потрібно записати на CD, розташовані в різних
+папках, можна додавати їх до списку послідовно, повторюючи кілька
+разів операцію п. 3.</p></li>
+<li><p>Коли всі файли та папки додано до списку, необхідно натиснути кнопку
+<em>Finished</em>, у результаті чого всі вибрані файли та папки будуть
+відображені в діалоговому вікні <em>Disk Content.</em></p></li>
+<li><p>Після того як уміст диску сформовано, потрібно натиснути у вікні
+Nero Express кнопку <em>Next (Далі)</em> для переходу до наступного етапу
+записування компакт – диску, після чого з’явиться вікно <em>Final Burn
+Setting (Останні настройки записування CD)</em>, в якому розміщені такі
+поля:</p>
+<ul class="simple">
+<li><p><em>Current recorder</em> – список, в якому можна вказати пристрій, що
+буде використовуватися для записування диску;</p></li>
+<li><p><em>Disk name</em> – у даному полі можна вказати ім’я диску, що буде
+відображатися в Провіднику або в іншому файловому менеджері;</p></li>
+<li><p><em>Title (CD Text)</em> – у цьому полі можна вказати назву музичного
+альбому;</p></li>
+<li><p><em>Artist (CD Text)</em> – тут можна вказати ім’я виконавця музичного
+альбому;</p></li>
+<li><p><em>Writing speed</em> – швидкість записування диску;</p></li>
+<li><p><em>Number of copies</em> – кількість копій.</p></li>
+</ul>
+</li>
+<li><p>Коли задані всі параметри, треба натиснути кнопку <em>Burn (Запис)</em>, у
+результаті чого буде відкрите діалогове вікно <em>Waiting for Disc
+(Чекання диску)</em> з вимогою вставити у привід диск CD – R (RW).</p></li>
+<li><p>Після установки CD у привід програма Nero Express запустить модуль
+записування.</p></li>
+<li><p>За необхідністю зупинити процес записування диску треба натиснути
+кнопку <em>Stop</em>, у результаті чого програма Nero Express відобразить
+діалогове вікно, в якому буде запропоновано підтвердити скасування
+процесу записування диску.</p></li>
+<li><p>Після завершення процесу створення диску програма Nero Express
+виведе на екран повідомлення про те, що записування диску пройшло
+успішно, і покаже швидкість, на якій відбувалося записування.</p></li>
+<li><p>Далі слід натиснути кнопку <em>ОК</em>, після чого з’явиться вікно <em>Nero
+Express</em>, в якому пропонується виконати такі дії:</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Burn same project again</em> – записати той же проект ще раз;</p></li>
+<li><p><em>New project</em> – створити новий проект;</p></li>
+<li><p><em>Cover Designer</em> – розробити дизайн обкладинки нового диску;</p></li>
+<li><p><em>Save project</em> – зберегти записаний проект.</p></li>
+</ul>
+<p>Для записування компакт – диску з даними різного типу, таких як документ
+Word, чи папка з вкладеними в неї файлами, чи яке – небудь зображення,
+необхідно виконати:</p>
+<ol class="arabic simple">
+<li><p>Вибрати пункт <em>Data Disc</em> групи <em>Data</em>.</p></li>
+<li><p>За допомогою кнопки <em>Add</em> сформувати список файлів і папок, які
+потрібно записати на CD.</p></li>
+<li><p>У вікні <em>Final Burn Setting</em> задати такі настройки:</p>
+<ul class="simple">
+<li><p><em>Current recorder;</em></p></li>
+<li><p><em>Disc name;</em></p></li>
+<li><p>Writing speed.</p></li>
+</ul>
+</li>
+<li><p>Після настроювання параметрів натиснути кнопку <em>Burn</em>.</p></li>
+</ol>
+<p>Найчастіше записують два типи „ звукових ” дисків: звичайні Audio – CD,
+які можна прослуховувати на різних побутових програвачах; та МР3 –
+диски, для прослуховування яких потрібні спеціальні програвачі.</p>
+<p>Записування відео – CD</p>
+<ol class="arabic simple">
+<li><p>У групі <em>Videos / Pictures</em> вибрати пункт Video CD.</p></li>
+<li><p>За допомогою кнопки <em>Add</em> у вікні <em>My Video CD</em> сформувати список
+відеофільмів, які необхідно записати на CD.</p></li>
+<li><p>Створити меню для заставки, тобто встановити прапорець <em>Enable VCD
+Menu</em>, а потім натиснути кнопку <em>Next</em>.</p></li>
+<li><p>У лівій частині вікна <em>My Video CD Menu</em> відобразиться вигляд
+майбутнього меню; праворуч знаходяться кнопки, що дозволяють
+змінювати його властивості:</p>
+<ul class="simple">
+<li><p><em>Layout</em> – виконує компонування написів меню, їхнє розташування на
+екрані, а також наявність або відсутність розмежувальних ліній;</p></li>
+<li><p><em>Background</em> – задає колір фону, а також наявність або відсутність
+фонового малюнку;</p></li>
+<li><p><em>Text</em> – дозволяє створювати написи в меню;</p></li>
+<li><p><em>Show full screen menu</em> – дозволяє розгорнути меню на весь екран;</p></li>
+<li><p><em>Set as default</em> – установлює поточний екран як стандартний для
+всіх майбутніх проектів.</p></li>
+</ul>
+</li>
+<li><p>У вікні <em>Final Burn Settings</em> потрібно встановити такі параметри:</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Current recorder;</em></p></li>
+<li><p><em>Disc name;</em></p></li>
+<li><p><em>Writing speed;</em></p></li>
+<li><p><em>Number of copies.</em></p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>Після перевірки правильності усіх параметрів потрібно натиснути
+кнопку <em>Burn</em>.</p></li>
+</ol>
+</section>
+<section id="id11">
+<h3><strong>Програвачі аудіо- та відео файлів</strong><a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Для збереження однієї хвилини нетиснутого звуку потрібно близько 10 Мб,
+а для звуку у форматі МР3 – від 1 до 2 Мб (залежно від якості
+стискання).</p>
+<section id="winamp">
+<h4><strong>Winamp</strong><a class="headerlink" href="#winamp" title="Link to this heading">#</a></h4>
+<p>Ця програма дозволяє програвати як МР3 – файли, так і кілька десятків
+інших форматів, серед яких присутні відео формати (тому Winamp є також і
+відеоплеєром).</p>
+<p><em><u>Програвання файлів</u></em> – для початку відтворення МР3 – файлу його
+необхідно завантажити у Winamp.</p>
+<p><em><u>Робота зі списком відтворення</u></em> – список відтворення (Playlist)
+зберігає перелік музичних композицій, що будуть програватися Winamp.</p>
+<p><em><u>Інтерфейс Winamp</u></em> – для зміни оболонки необхідно натиснути
+комбінацію клавіш <strong>Ctrl + P</strong>, після чого відкриється вікно
+настроювання програми, де слід перейти у розділ <em>Skins</em>.</p>
+</section>
+<section id="audio-cd-y-mp3">
+<h4>Конвертування Audio CD y MP3<a class="headerlink" href="#audio-cd-y-mp3" title="Link to this heading">#</a></h4>
+<p>Однією з найбільш популярних є програма CDex.</p>
+<p><em><u>Швидке конвертування</u></em> – для конвертування доріжки в МР3 – файл
+достатньо виділити її та натиснути кнопку <em>Extract CD track(s) to
+Compressed Audio File(s)</em>.</p>
+<p>Програма Windows Media Player дозволяє записувати файли мультимедіа на
+оптичні носії інформації, відтворювати диски DVD (при наявності
+обладнання DVD), слухати радіостанції в Internet тощо.</p>
+</section>
+</section>
+<section id="id12">
+<h3><strong>Словники та перекладачі</strong><a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>На відміну від словників, комп’ютерні перекладачі дозволяють перекладати
+не окремі слова, а словосполучення та навіть цілі речення.</p>
+<p>Програма <strong>Lingvo</strong> забезпечує швидкий і зручний переклад з англійської,
+німецької, французької й італійської мов російською та навпаки.</p>
+<p><em><u>Переклад слова</u></em> – у верхній частині вікна задається мова
+потрібного слова (ліворуч) і мова, якою слово потрібно перекласти
+(праворуч).</p>
+<p><em><u>Панель Книжкова полиця</u></em> – на панелі <em>Dictionary Bar (Панель
+словників)</em> знаходяться кнопки для керування словниками робочої пари:</p>
+<ul class="simple">
+<li><p><em>LingvoUniversal –</em> активує словник загальної лексики;</p></li>
+<li><p><em>LingvoEconomics –</em> запускає економічний словник;</p></li>
+<li><p><em>LingvoComputer –</em> використовується для актитування словника
+комп’ютерної термінології;</p></li>
+<li><p><em>Polytechnic –</em> активує політехнічний словник;</p></li>
+<li><p><em>Medical</em> – запускає медичний словник.</p></li>
+</ul>
+<p><em><u>Панель інструментів</u></em> – у нижній частині вікна Lingvo розміщена
+панель інструментів, за допомогою якої виконується робота з перекладання
+слів (можна перекладати як слово з рядка, так і вибране у списку вікна
+Lingvo).</p>
+<p><em><u>Створення користувальницьких словників</u></em> – для створення такого
+словника спочатку необхідно натиснути кнопку <em>Create / Edit Card</em>, у
+результаті чого відобразиться вікно, в якому необхідно у відповідному
+полі вказати ім’я картки.</p>
+<p>Після того як назву картки вказано, необхідно натиснути кнопку <em>Edit</em>.</p>
+<p>Словник <strong>УЛІС</strong> компанії Пролінг призначено для перекладу з російської
+мови українською та навпаки.</p>
+<p>Користувач має можливість керувати роботою словника за допомогою кнопок,
+розташованих на панелі інструментів, функції яких такі:</p>
+<ul class="simple">
+<li><p><em>Завжди зверху</em> – при активуванні даної кнопки вікно програми буде
+відображатися поверх інших;</p></li>
+<li><p><em>Переклад</em> – натисканням цієї кнопки здійснюється перекладслова з
+рядка введення з зазначеними параметрами;</p></li>
+<li><p><em>Парадигма</em> – натискання цієї кнопки призведе до відкриття вікна
+парадигми виділеного слова;</p></li>
+<li><p><em>Синоніми</em> – у новому вікні відобразяться синоніми виділеного слова;</p></li>
+<li><p><em>Російсько</em> – <em>Український</em> – слова будуть перекладатися з російської
+мови українською;</p></li>
+<li><p><em>Українсько</em> – <em>Російський</em> – переклад буде здійснюватися з
+української мови російською;</p></li>
+<li><p><em>Закрити картки</em> – натискання цієї кнопки призведе до закриття усіх
+тимчасових карток;</p></li>
+<li><p><em>Виклик довідки</em> – відкриває вікно, що містить коротку довідкову
+інформацію про цю програму.</p></li>
+</ul>
+<p>Перекладач <strong>PROMT</strong>.</p>
+<p>Тут можна знайти функції, знайомі користувачеві по роботі з текстовим
+процесором Word.</p>
+<p>Панель <em>Formatting ( Форматування )</em> надає стандартні можливості
+форматування тексту, аналогічно редакторові Word.</p>
+<p>Для керування безпосередньо процесом перекладу використовується панель
+Translation.</p>
+<p>Кнопки панелі Translation:</p>
+<ul class="simple">
+<li><p><em>Direction of Translation</em> – використовується для встановлення
+напрямку перекладу;</p></li>
+<li><p><em>Topic Template</em> – використовується для вибору тематичних шаблонів;</p></li>
+<li><p><em>Entry</em> – використовується для додавання слова або словосполучення у
+словник;</p></li>
+<li><p><em>Document Dictionaries</em> – застосовується для перегляду та редагування
+доступних словників;</p></li>
+<li><p><em>Translate Next Paragraph</em> – дозволяє перекласти перший неперекладений
+параграф, або ж перекладений, але змінений згодом;</p></li>
+<li><p><em>Translate Current Paragraph</em> – перекладає текст параграфа, поміченого
+блакитною смужкою;</p></li>
+<li><p><em>Translate Whole Text</em> – перекладає весь текст;</p></li>
+<li><p><em>Translate Selected Paragraphs</em> – використовується для перекладу
+виділених фрагментів тексту;</p></li>
+<li><p><em>Preserve Word</em> – дозволяє переглядати та редагувати список збережених
+слів;</p></li>
+<li><p><em>Unknown Words</em> – зберігає невідомі слова, виявлені після перекладу;</p></li>
+<li><p><em>Skip Translation</em> – дозволяє помітити параграфи, що не потребують
+перекладу;</p></li>
+<li><p><em>Document Translation Rules</em> – задає правила перекладу тексту;</p></li>
+<li><p><em>Show Variants of Translation</em> – задає режим, в якому відображається
+всі варіанти перекладу даного слова.</p></li>
+</ul>
+<p>У лівій частині вікна необхідно ввести текст, що підлягає перекладу.</p>
+<p>Якщо необхідно перекласти більше однієї фрази ( наприклад, кілька
+абзаців ), варто скористатися відповідною кнопкою.</p>
+<p>Найбільш популярним російсько – українським перекладачем по праву
+вважається програма <strong>Плай</strong>, що входить до складу пакету Proling
+Office.</p>
+<p>Коли у Word підготовлено вихідний текст (наприклад, російською мовою),
+потрібно виконати команду <em>Плай / Переклад</em>.</p>
+<p>На вкладці <em>Переклад</em> за замовчуванням задано російсько – український
+напрямок перекладу (можна змінити на українсько – російський).</p>
+<p>На вкладці <em>Настроювання</em> можна вказати, чи треба, щоб Плай позначав у
+тексті слова різного типу, зокрема:</p>
+<ul class="simple">
+<li><p><em>невідомі слова</em> – слова, яких немає у словнику перекладача Плай,
+будуть позначатися червоним кольором;</p></li>
+<li><p><em>слова з неприпустимими символами</em> – якщо в деяких словах
+зустрічаються символи з інших мов ( наприклад, буква « ы » в
+українському тексті ), вони будуть позначатися темно – синім
+кольором;</p></li>
+<li><p><em>зарезервовані слова</em> – якщо у тексті зустрічаються спеціалізовані
+терміни, вони будуть позначатися фіолетовим кольором;</p></li>
+<li><p><em>слова з варіантами перекладу</em> – слова, що мають кілька варіантів
+перекладу, будуть позначатися зеленим кольором.</p></li>
+</ul>
+<p>Якщо користувачеві необхідна допомога програми Плай після виконання
+операції первісного перекладу, потрібно встановити прапорець <em>Ввімкнути
+режим редагування ПЛАЙ після перекладу</em>.</p>
+<p>Коли усі параметри задані, потрібно натиснути кнопку <em>Перекласти</em>, і
+Плай виконає переклад тексту в активному документі Word, що буде
+ілюструватися інтерактивним вікном з відображенням часу, що залишився.</p>
+<p>Після закінчення перекладу буде автоматично створено новий документ Word
+з перекладеним текстом.</p>
+</section>
+<section id="id13">
+<h3><strong>Антивірусні програми</strong><a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p><em>Вірус</em> являє собою зловмисну комп’ютерну програму, здатну після входу в
+комп’ютерну систему ховатися, а також виконувати частину свого коду на
+шкоду користувачеві та розмножуватись через лінії зв’язку або за
+допомогою інфікованих дисків, заражаючи інші програми та файли даних.</p>
+<p>У найпоширенішому випадку комп’ютерний вірус складається з двох частин –
+<em>голови</em>, якій першій надається керування, і <em>хвоста</em>, розташованого
+окремо від голови.</p>
+<p>Для одержання керування вірус записує свою голову в одне з названих
+місць:</p>
+<ul class="simple">
+<li><p>завантажувальні модулі ( COM -, EXE – файли );</p></li>
+<li><p>MBR ( Master Boot Record – головний завантажувальний запис ) дискети
+або вінчестера;</p></li>
+<li><p>драйвер;</p></li>
+<li><p>об’єктний модуль;</p></li>
+<li><p>ВАТ – файл;</p></li>
+<li><p>вихідний текст програми алгоритмічною мовою ( у розрахунку на його
+компіляцію );</p></li>
+<li><p>файли – документи, створені додатками обробки даних, що підтримують
+роботу на макромовах.</p></li>
+</ul>
+<p>Варто розрізняти дві основні дії (фази), які виконує комп’ютерний вірус:
+<em>розмноження</em> та <em>прояв</em>.</p>
+<p>Для ряду вірусів фаза прояву відсутня, тобто крім розмноження вони
+ніяких несанкціонованих дій не виконують.</p>
+<p>Залежно від середовища перебування віруси можна розділити на такі
+підгрупи:</p>
+<ul class="simple">
+<li><p><em>файлові віруси</em> – віруси, що безпосередньо проникають у файл, що
+виконується (найбільш розповсюджений тип вірусів), створюють файли –
+двійники або використовують особливості організації файлової системи;</p></li>
+<li><p><em>завантажувальні (бутові) віруси</em> – віруси, що записуються у
+завантажувальний сектор (boot – сектор) флопі – диска й у boot –
+сектор або MBR жорсткого диска;</p></li>
+<li><p><em>макровіруси</em> – віруси, що заражать текстові документи, електронні
+таблиці або бази даних різних додатків, що мають убудовані макромови
+(наприклад, офісні програми Word, Excel, Access);</p></li>
+<li><p><em>мережні віруси</em> – віруси, що використовують для свого розповсюдження
+комп’ютерні мережі або електронну пошту.</p></li>
+</ul>
+<p>Деякі віруси можуть належати одночасно до різних підгруп, наприклад
+файлово – завантажувальний вірус або мережний макровірус.</p>
+<p>Єдиним стовідсотковим за надійністю методом захисту від утрати важливої
+інформації є її резервне копіювання на захищені від записування пристрої
+збереження даних.</p>
+<p>Жодна антивірусна програма не зрівняється за надійністю з архівацією
+інформації.</p>
+<p>Діюче правило, що частково гарантує збереження інформації, - це
+обмеження копіювання даних з ненадійних джерел.</p>
+<p>По – перше, необхідно намагатися не запускати неперевірені файли, у тому
+числі отримані по комп’ютерній мережі.</p>
+<p>Найбільш популярними й ефективними антивірусними програмами є
+антивірусні сканери та монітори.</p>
+<ol class="arabic simple">
+<li><p><em>Сканери</em> здатні знайти фіксований набір відомих вірусів у файловій
+системі, секторах і системній пам’яті, а потім – негайно видалити
+більшість з них.</p></li>
+<li><p><em>Монітори</em> – це різновид сканерів, що, постійно перебуваючи у
+пам’яті, відслідковують вірусоподібні ситуації, що трапляються з
+диском і пам’яттю ( тобто виконують безперервний моніторинг ).</p></li>
+</ol>
+<p>Найбільш популярним антивірусним пакетом для домашніх та офісних ПК
+останнім часом по праву вважається <strong>KAV Касперського</strong>, програми якого
+призначені для пошуку та видалення вірусів.</p>
+<p>У попередніх версіях, коли пакет нзивався AVP, головними його складовими
+були програми AVP Монітор і AVP Сканер.</p>
+<p>Для захисту комп’ютера служить вкладка <em>Protection</em>.</p>
+<p>У правій частині цієї <em>вкладки відображаються такі попередження:</em></p>
+<ul class="simple">
+<li><p><em>Full computer scan has not been performed</em> – попередження про те, що
+повну перевірку не було виконано, і рекомендація виконати повну
+перевірку комп’ютера негайно;</p></li>
+<li><p><em>Your anti – virus databases are totally outdated</em> – попередження про
+те, що антивірусні бази не поновлювалися давно, і рекомендаціґ негайно
+їх оновити.</p></li>
+</ul>
+<p>Для запуску процесу повного сканування комп’ютера слід вибрати у лівій
+частині вікна KAV пункт <em>Scan My Computer</em>.</p>
+<p>Після вибору одного зі способів перевірки ( наприклад, <em>Scan removable
+drives</em> ) запускається процес сканування з відображенням часу початку (
+<em>Task start time</em> ), запланованого часу кінця перевірки ( <em>Task
+completion time</em> ), поточний файл, що перевіряється ( <em>Current object</em>
+).</p>
+<p>Програма KAV у своїй роботі використовує антивірусні бази, які необхідно
+регулярно обновляти.</p>
+<p>Якщо виникне необхідність зупинити з якихось причин процес оновлення
+антивірусних баз, треба натиснути кнопку <em>Stop</em>.</p>
+<p>Щоб налаштувати програму KAV потрібним чином, слід відкрити вкладку
+<em>Setting</em>.</p>
+<p>Для настроювання постійного захисту комп’ютера використовується команда
+<em>Configure Real – Time Protection</em>.</p>
+<p>Поряд з KAV, іншим популярним антивірусним пакетом в Україні є <strong>Doctor
+Web</strong>.</p>
+<p>До складу антивірусного пакету входять такі основні прграми: Dr. Web
+(Сканер) і SpiDer Guard ( Монітор ).</p>
+<p>Сканер виконує замовлену перевірку комп’ютера на наявність вірусів.</p>
+<p>Після запуску Dr. Web на екрані з’являється головне вікно програми.</p>
+<p>Монітор, постійно перебуваючи в пам’яті, перехоплює звернення до файлів
+і системних областей дисків і здійснює при цьому їхню перевірку на
+наявність вірусів (перевірка на “ходу”).</p>
+<p>Монітор SpiDer Guard реалізований у вигляді двох взаємодіючих модулів –
+драйвера – монітора файлової системи ( <strong>spider.sys</strong> ) і системного
+сервісу (<strong>spidernt.exe</strong>), призначених для ініціалізації мережних
+компонентів при роботі SpiDer у режимі автоматичного запуску.</p>
+<p>Щоб активізувати процедуру оновлення антивірусних баз даних Dr. Web,
+необхідно у вікні Сканера натиснути відповідну кнопку.</p>
+<p>Після цього Сканер зв’язується з антивірусною базою даних Doctor Web і
+копіює на комп’ютер користувача файли відновлення.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="laba6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><strong><u>Лабораторна робота № 6</u></strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="ch3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><strong>MS Office: PowerPoint</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><strong>Інтернет і його можливості</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><strong>Підключення до мережі Інтернет</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internet-explorer"><strong>Веб – навігатор Internet Explorer</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outlook-express"><strong>Електронна пошта й Outlook Express</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><strong>Пошукові сервери</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><strong>Безкоштовна електронна пошта</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6"><strong>Корисні програми</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><strong>Файлові менеджери</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#total-commander"><strong>Програма Total Commander</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#far"><strong>Робота з програмою Far</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8"><strong>Архіватори</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#winzip"><strong>WinZip</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#winrar"><strong>WinRAR</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9"><strong>Перегляд графічних зображень</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acdsee"><strong>Програма ACDSee</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-picture-and-fax-viewer"><strong>Windows Picture and Fax Viewer</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10"><strong>Записування компакт – дисків</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><strong>Програвачі аудіо- та відео файлів</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#winamp"><strong>Winamp</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#audio-cd-y-mp3">Конвертування Audio CD y MP3</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><strong>Словники та перекладачі</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><strong>Антивірусні програми</strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Мартинюк С.В., Мартинюк О.В., Ковдриш В.В.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Мартинюк С.В., Мартинюк О.В., Ковдриш В.В..
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
